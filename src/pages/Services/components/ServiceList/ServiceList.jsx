@@ -1,28 +1,37 @@
+import { motion } from "framer-motion";
 import ServiceCard from "../ServiceCard/ServiceCard";
 
 const services = [
   {
     title: "Desarrollo Web",
-    icon: "🧩",
-    text: "Creamos sitios modernos, rápidos y accesibles con tecnologías como React, Angular y Laravel.",
+    icon: "🌐",
+    text: "Creamos sitios y aplicaciones modernas, rápidas y seguras.",
   },
   {
-    title: "SaaS a medida",
+    title: "Transformación Digital",
+    icon: "⚙️",
+    text: "Ayudamos a migrar tus procesos tradicionales al mundo digital.",
+  },
+  {
+    title: "Infraestructura Cloud",
     icon: "☁️",
-    text: "Diseñamos plataformas en la nube escalables para empresas que necesitan soluciones únicas.",
-  },
-  {
-    title: "Automatización de procesos",
-    icon: "🤖",
-    text: "Integramos herramientas que optimizan tareas repetitivas y mejoran tu productividad.",
+    text: "Diseñamos arquitecturas escalables y seguras en la nube.",
   },
 ];
 
 export default function ServiceList() {
   return (
     <div className="grid md:grid-cols-3 gap-8 px-4">
-      {services.map((service, idx) => (
-        <ServiceCard key={idx} {...service} />
+      {services.map((item, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: idx * 0.2 }}
+          viewport={{ once: true, amount: 0.4 }}
+        >
+          <ServiceCard {...item} />
+        </motion.div>
       ))}
     </div>
   );

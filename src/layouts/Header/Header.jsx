@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import "./Header.scss";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,24 +14,25 @@ export default function Header() {
   ];
 
   return (
-    <header className="header fixed w-full z-1 bg-richBlack text-antiFlashWhite shadow-md">
+    <header className="fixed top-0 left-0 w-full z-50 bg-richBlack/90 backdrop-blur-sm text-antiFlashWhite shadow-md transition-colors duration-300">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-caribbeanGreen tracking-wide">
           Asensux
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6 ">
+        <nav className="hidden md:flex space-x-6">
           {navLinks.map(({ to, label, end }) => (
             <NavLink
               key={to}
               to={to}
               end={end}
               className={({ isActive }) =>
-                `relative px-3 py-2 text-base font-medium transition-colors duration-300
-                ${isActive ? 'text-caribbeanGreen after:w-full' : 'text-antiFlashWhite hover:text-caribbeanGreen'}
-                after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-0
-                after:bg-caribbeanGreen after:transition-all after:duration-300 hover:after:w-full`
+                `relative px-3 py-2 text-base font-medium transition duration-300
+                 ${isActive ? 'text-caribbeanGreen' : 'text-antiFlashWhite hover:text-caribbeanGreen'}
+                 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0
+                 after:h-[2px] after:bg-caribbeanGreen hover:after:w-full after:transition-all after:duration-300`
               }
             >
               {label}
@@ -40,29 +40,33 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile Button */}
+        {/* Mobile Toggle */}
         <button
-          className="md:hidden focus:outline-none bg-gradient-to-r from-richBlack to-black"
+          className="md:hidden text-antiFlashWhite focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+            />
           </svg>
         </button>
       </div>
 
-      {/* Mobile Navigation (expandible) */}
+      {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gradient-to-r from-richBlack to-black px-4 pb-4 space-y-2 bg-richBlack text-center">
+        <div className="md:hidden bg-richBlack/95 backdrop-blur-md px-4 pb-6 pt-2 space-y-3 text-center z-40 shadow-md transition-all duration-300">
           {navLinks.map(({ to, label }) => (
             <NavLink
               key={to}
               to={to}
               onClick={() => setIsMenuOpen(false)}
               className={({ isActive }) =>
-                `block py-2 font-medium transition-colors duration-300
-                ${isActive ? 'text-caribbeanGreen' : 'text-antiFlashWhite hover:text-caribbeanGreen'}`
+                `block py-2 font-medium text-lg transition duration-300
+                 ${isActive ? 'text-caribbeanGreen' : 'text-antiFlashWhite hover:text-caribbeanGreen'}`
               }
             >
               {label}

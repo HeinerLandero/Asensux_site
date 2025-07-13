@@ -3,7 +3,7 @@ import {
   Cpu,
   Palette,
   CloudCog
-} from "lucide-react";             // 👉 íconos vector escalables
+} from "lucide-react"; 
 
 const features = [
   {
@@ -27,7 +27,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative relative bg-gradient-to-r from-richBlack to-black  py-24 bg-richBlack text-antiFlashWhite flex flex-col items-center px-6 overflow-hidden"
+      className="relative bg-gradient-to-r from-richBlack to-black  py-24 bg-richBlack text-antiFlashWhite flex flex-col items-center px-6 overflow-hidden"
     >
       {/* grid decorativa */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.04] pointer-events-none" />

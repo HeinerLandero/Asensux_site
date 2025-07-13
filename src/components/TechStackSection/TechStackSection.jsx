@@ -1,4 +1,3 @@
-// src/sections/TechStackSection.tsx
 import {
     FaReact,
     FaNodeJs,
@@ -9,6 +8,7 @@ import {
     FaGitAlt,
 } from "react-icons/fa";
 import { SiTailwindcss, SiMysql, SiFirebase, SiVite } from "react-icons/si";
+import { motion } from "framer-motion";
 
 export default function TechStackSection() {
     const stack = [
@@ -27,27 +27,64 @@ export default function TechStackSection() {
 
     return (
         <section className="bg-gradient-to-r from-richBlack to-black bg-darkGreen py-20 px-6 text-center text-antiFlashWhite">
-            <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                    Tecnologías que <span className="text-caribbeanGreen">usamos</span>
-                </h2>
-                <p className="text-stone mb-12">
+            <motion.div
+                className="max-w-6xl mx-auto"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ staggerChildren: 0.15 }}
+            >
+                <motion.h2
+                    className="text-3xl md:text-5xl font-bold mb-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    Tecnologías que{" "}
+                    <span className="text-caribbeanGreen">usamos</span>
+                </motion.h2>
+
+                <motion.p
+                    className="text-stone mb-12"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3, duration: 0.6 }}
+                >
                     Trabajamos con herramientas modernas y confiables para garantizar
                     calidad, escalabilidad y eficiencia.
-                </p>
+                </motion.p>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
+                <motion.div
+                    className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center"
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={{
+                        hidden: {},
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.1,
+                            },
+                        },
+                    }}
+                    viewport={{ once: true }}
+                >
                     {stack.map((tech, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className="flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300"
+                            className="flex flex-col items-center gap-2 cursor-default"
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0 },
+                            }}
+                            transition={{ duration: 0.4, ease: "easeOut" }}
+                            whileHover={{ scale: 1.1 }}
                         >
                             <div className="text-5xl">{tech.icon}</div>
                             <div className="text-sm text-stone">{tech.name}</div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </section>
     );
 }

@@ -51,7 +51,7 @@ export default function ServicesSection() {
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none" />
 
             {/* Halo de luz */}
-            <div className="absolute w-[500px] h-[500px] bg-caribbeanGreen/25 blur-3xl rounded-full -top-32 -left-32 -z-10" />
+            <div className="absolute mw-[500px] h-[500px] bg-caribbeanGreen/25 blur-3xl rounded-full -top-32 -left-32 -z-10" />
 
             <motion.h2
                 className="text-3xl md:text-5xl font-bold text-center max-w-3xl mx-auto"

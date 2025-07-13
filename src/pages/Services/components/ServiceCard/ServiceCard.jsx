@@ -1,8 +1,13 @@
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
 export default function ServiceCard({ title, icon, text }) {
   return (
-    <div className="bg-gradient-to-b from-darkGreen to-richBlack p-6 rounded-2xl border border-[#004e3a] shadow-xl transform hover:scale-[1.03] transition-all duration-300 hover:border-caribbeanGreen hover:shadow-neonGreen">
+    <motion.div
+      whileHover={{ scale: 1.05, boxShadow: "0 0 15px #00df81" }}
+      transition={{ type: "spring", stiffness: 300 }}
+      className="bg-gradient-to-b from-darkGreen to-richBlack p-6 rounded-2xl border border-[#004e3a] shadow-xl"
+    >
       <div className="flex items-center justify-center mb-4">
         <div className="text-4xl bg-[#00392c] text-caribbeanGreen rounded-full p-4 shadow-md">
           {icon}
@@ -12,7 +17,7 @@ export default function ServiceCard({ title, icon, text }) {
         {title}
       </h3>
       <p className="text-sm text-stone text-center">{text}</p>
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,6 +1,7 @@
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const testimonials = [
     {
@@ -22,48 +23,83 @@ const testimonials = [
 
 export default function TestimonialsCarousel() {
     const timer = useRef(null);
+
     const [sliderRef, instanceRef] = useKeenSlider({
         loop: true,
         renderMode: "performance",
         slides: {
-            perView: 2,
-            spacing: 20,
+            perView: 1,
+            spacing: 16,
+        },
+        breakpoints: {
+            "(min-width: 768px)": {
+                slides: { perView: 2, spacing: 24 },
+            },
         },
     });
 
     useEffect(() => {
         if (instanceRef.current) {
             timer.current = setInterval(() => {
-                instanceRef.current.next();
-            }, 5000);
+                instanceRef.current?.next();
+            }, 6000);
         }
-
         return () => {
-            if (timer.current) {
-                clearInterval(timer.current);
-            }
+            clearInterval(timer.current);
         };
     }, [instanceRef]);
 
     return (
-        <section className="bg-gradient-to-r from-richBlack to-black bg-richBlack py-20 px-6 text-antiFlashWhite">
-            <div className="max-w-3xl mx-auto text-center">
+        <section className="bg-gradient-to-r from-richBlack to-black py-20 px-6 text-antiFlashWhite">
+            <motion.div
+                className="max-w-4xl mx-auto text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+            >
                 <h2 className="text-3xl md:text-5xl font-bold mb-12">
                     Lo que dicen nuestros <span className="text-caribbeanGreen">clientes</span>
                 </h2>
+
+                {/* 🚫 No pongas animación en este div */}
                 <div ref={sliderRef} className="keen-slider">
                     {testimonials.map((t, i) => (
                         <div
                             key={i}
-                            className="keen-slider__slide bg-darkGreen p-8 rounded-xl border border-[#004e3a] shadow-lg"
+                            className="keen-slider__slide bg-darkGreen p-8 rounded-xl border border-[#004e3a] shadow-md hover:shadow-[0_0_25px_rgba(0,223,129,0.25)] transition-all duration-300 hover:scale-[1.02]"
                         >
-                            <p className="text-gray-300 italic mb-6">“{t.text}”</p>
-                            <div className="text-caribbeanGreen font-semibold">{t.name}</div>
-                            <div className="text-sm text-stone">{t.role}</div>
+                            <motion.p
+                                className="text-gray-300 italic mb-6 text-lg leading-relaxed"
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.4, delay: i * 0.2 }}
+                                viewport={{ once: true }}
+                            >
+                                “{t.text}”
+                            </motion.p>
+                            <motion.div
+                                className="text-caribbeanGreen font-semibold text-lg"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ delay: i * 0.25 + 0.2 }}
+                                viewport={{ once: true }}
+                            >
+                                {t.name}
+                            </motion.div>
+                            <motion.div
+                                className="text-sm text-stone"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ delay: i * 0.25 + 0.4 }}
+                                viewport={{ once: true }}
+                            >
+                                {t.role}
+                            </motion.div>
                         </div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

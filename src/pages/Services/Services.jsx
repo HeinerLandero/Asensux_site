@@ -1,6 +1,8 @@
 import "./Services.scss";
 import ServicesIntro from "./components/ServicesIntro/ServicesIntro";
 import ServiceList from "./components/ServiceList/ServiceList";
+import WhyChooseUsSection from "./components/WhyChooseUsSection/WhyChooseUsSection";
+import ClientLogosSection from "./components/ClientLogosSection/ClientLogosSection";
 
 export default function Services() {
   return (
@@ -8,6 +10,8 @@ export default function Services() {
       <div className="max-w-6xl mx-auto">
         <ServicesIntro />
         <ServiceList />
+        <WhyChooseUsSection />
+        <ClientLogosSection />
       </div>
     </section>
   );
