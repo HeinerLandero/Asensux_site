@@ -1,15 +1,23 @@
-// @import './variables';
-// @import './mixins';
 
-/* Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+$radius-sm: 6px;
+$radius-md: 8px;
+$radius-lg: 10px;
+
+@mixin flex-center($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: center;
+  justify-content: center;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fff;
-  color: #111;
+%card-shadow {
+  box-shadow: 0 10px 20px rgba(0 0 0 / 0.07);
+}
+
+.card-custom {
+  @extend %card-shadow;
+  @include flex-center(column);
+  border-radius: $radius-lg;
+  padding: 2rem;
 }
