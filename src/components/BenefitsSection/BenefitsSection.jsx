@@ -18,13 +18,13 @@ export default function BenefitsSection() {
         <section className="bg-darkGreen  bg-gradient-to-r from-richBlack to-black py-20 px-6 text-antiFlashWhite">
             <div className="max-w-5xl mx-auto text-center">
                 <h2 className="text-3xl md:text-5xl font-bold mb-12">
-                    ¿Por qué elegir <span className="text-caribbeanGreen">Asensux</span>?
+                    ¿Por qué elegir <span className="text-caribbeanGreen">kambio</span>?
                 </h2>
                 <div className="grid md:grid-cols-3 gap-10">
                     {benefits.map((b, i) => (
                         <div
                             key={i}
-                            className="bg-richBlack p-6 rounded-xl border border-[#004e3a] shadow-lg hover:shadow-caribbeanGreen/30 transition-shadow duration-300"
+                            className="bg-richBlack p-6 rounded-xl border border-[#ffffff] shadow-lg hover:shadow-caribbeanGreen/30 transition-shadow duration-300"
                         >
                             <h3 className="text-xl font-semibold text-caribbeanGreen mb-4">{b.title}</h3>
                             <p className="text-gray-300">{b.description}</p>

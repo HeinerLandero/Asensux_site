@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import logoDesktop from "@/assets/images/kambio-main-logo-white-resize.png";
+import logoMobile from "@/assets/images/kambio-logo-white.png";
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +21,19 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-caribbeanGreen tracking-wide">
-          Asensux
+          {/* Desktop logo */}
+          <img
+            src={logoDesktop}
+            alt="Logo Kambio"
+            className="hidden md:block mx-auto w-48 drop-shadow-lg"
+          />
+
+          {/* Mobile logo */}
+          <img
+            src={logoMobile}
+            alt="Logo Kambio Mobile"
+            className="block md:hidden mx-auto w-16 drop-shadow-md"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -58,7 +73,9 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-richBlack/95 backdrop-blur-md px-4 pb-6 pt-2 space-y-3 text-center z-40 shadow-md transition-all duration-300">
+        <div className="md:hidden menu-mobile  backdrop-blur-md px-4 pb-6 pt-2 space-y-3 text-center z-40 shadow-md transition-all duration-300"
+
+        >
           {navLinks.map(({ to, label }) => (
             <NavLink
               key={to}

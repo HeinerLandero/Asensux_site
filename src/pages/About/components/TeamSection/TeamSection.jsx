@@ -36,7 +36,7 @@ export default function TeamSection() {
           {teamMembers.map((member, idx) => (
             <motion.div
               key={idx}
-              className="group bg-richBlack rounded-2xl p-6 border border-[#004e3a] shadow-xl transition-all duration-300 hover:border-caribbeanGreen hover:shadow-[0_0_20px_#00df81]"
+              className="group bg-richBlack rounded-2xl p-6 border border-[#ffffff] shadow-xl transition-all duration-300 hover:border-caribbeanGreen hover:shadow-[0_0_20px_#ffffff]"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.2 }}

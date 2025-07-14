@@ -1,10 +1,10 @@
 // src/sections/ClientsSection.tsx
 const clients = [
-    { name: "NovaTech", logo: "src/assets/logos/logo-cliente-asensux-wb.png" },
-    { name: "Startify", logo: "src/assets/logos/logo-cliente-asensux-wb.png" },
-    { name: "Uplift", logo: "src/assets/logos/logo-cliente-asensux-wb.png" },
-    { name: "OmniCore", logo: "src/assets/logos/logo-cliente-asensux-wb.png" },
-    { name: "DataNest", logo: "src/assets/logos/logo-cliente-asensux-wb.png" },
+    { name: "NovaTech", logo: "src/assets/images/kambio-logo-white.png" },
+    { name: "Startify", logo: "src/assets/images/kambio-logo-white.png" },
+    { name: "Uplift", logo: "src/assets/images/kambio-logo-white.png" },
+    { name: "OmniCore", logo: "src/assets/images/kambio-logo-white.png" },
+    { name: "DataNest", logo: "src/assets/images/kambio-logo-white.png" },
 ];
 
 export default function ClientsSection() {
@@ -15,12 +15,12 @@ export default function ClientsSection() {
                     Empresas que <span className="text-caribbeanGreen">confían</span> en nosotros
                 </h2>
                 <p className="text-stone mb-12">
-                    Más de 20 empresas han confiado en Asensux para potenciar sus productos digitales.
+                    Más de 20 empresas han confiado en kambio para potenciar sus productos digitales.
                 </p>
 
                 <div className="flex flex-wrap justify-center items-center gap-10 mt-10">
                     {clients.map((client, index) => (
-                        <div key={index} className="w-32 h-16 flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+                        <div key={index} className="w-32 h-16 flex items-center justify-center  hover:grayscale-0 transition duration-300">
                             <img
                                 src={client.logo}
                                 alt={client.name}

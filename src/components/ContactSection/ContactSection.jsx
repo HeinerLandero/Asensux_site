@@ -31,7 +31,7 @@ export default function CallToActionSection() {
           transition={{ delay: 0.1, duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Hablemos sobre tu idea. El equipo de <strong>Asensux</strong> está listo para construir algo increíble contigo.
+          Hablemos sobre tu idea. El equipo de <strong>kambio</strong> está listo para construir algo increíble contigo.
         </motion.p>
 
         <motion.div
@@ -42,7 +42,7 @@ export default function CallToActionSection() {
         >
           <Button
             size="lg"
-            className="bg-caribbeanGreen hover:bg-caribbeanGreen/80 text-black font-semibold text-base px-6 py-3 rounded-xl shadow-lg hover:shadow-[0_0_25px_rgba(0,223,129,0.4)] transition"
+            className="bg-caribbeanGreen hover:bg-caribbeanGreen/80 text-black font-semibold text-base px-6 py-3 rounded-xl shadow-[0_0_20px_0_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_2px_rgba(255,255,255,0.4)] transition"
           >
             Contáctanos <ArrowRight className="inline ml-2 w-4 h-4" />
           </Button>

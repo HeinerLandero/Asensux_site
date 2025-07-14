@@ -2,18 +2,18 @@ import { motion } from "framer-motion";
 
 const projects = [
     {
-        title: "Asensux Manager",
-        image: "/projects/asensux-manager.png",
+        title: "kambio Manager",
+        image: "src/assets/images/kambio-main-logo.jpg",
         description: "Sistema de gestión empresarial completo: tareas, proyectos, equipos y clientes.",
     },
     {
         title: "UpTranslink",
-        image: "/projects/asensux-manager.png",
+        image: "src/assets/images/kambio-main-logo.jpg",
         description: "Plataforma de transporte inteligente para gestión de rutas y movilidad urbana.",
     },
     {
         title: "Landing AI SaaS",
-        image: "/projects/asensux-manager.png",
+        image: "src/assets/images/kambio-main-logo.jpg",
         description: "Sitio web promocional para producto basado en inteligencia artificial.",
     },
 ];
@@ -22,7 +22,7 @@ export default function ProjectsSection() {
     return (
         <section
             id="projects"
-            className="relative relative bg-gradient-to-r from-richBlack to-black  bg-darkGreen py-24 px-6 text-white"
+            className="relative bg-gradient-to-r from-richBlack to-black  bg-darkGreen py-24 px-6 text-white"
         >
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5 pointer-events-none" />
 

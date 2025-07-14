@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 export default function ServiceCard({ title, icon, text }) {
   return (
     <motion.div
-      whileHover={{ scale: 1.05, boxShadow: "0 0 15px #00df81" }}
+      whileHover={{ scale: 1.05, boxShadow: "0 0 15px #ffffff" }}
       transition={{ type: "spring", stiffness: 300 }}
-      className="bg-gradient-to-b from-darkGreen to-richBlack p-6 rounded-2xl border border-[#004e3a] shadow-xl"
+      className="bg-gradient-to-b from-darkGreen to-richBlack p-6 rounded-2xl border border-[#ffffff] shadow-xl"
     >
       <div className="flex items-center justify-center mb-4">
         <div className="text-4xl bg-[#00392c] text-caribbeanGreen rounded-full p-4 shadow-md">

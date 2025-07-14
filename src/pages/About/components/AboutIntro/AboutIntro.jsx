@@ -10,7 +10,7 @@ export default function AboutIntro() {
       viewport={{ once: true }}
     >
       <h1 className="text-4xl md:text-5xl font-bold mb-6">
-        Sobre <span className="text-caribbeanGreen">Asensux</span>
+        Sobre <span className="text-caribbeanGreen">kambio</span>
       </h1>
       <p className="text-stone text-lg max-w-3xl mx-auto">
         Nacimos con el propósito de impulsar productos digitales con un enfoque claro en calidad, diseño y tecnología.

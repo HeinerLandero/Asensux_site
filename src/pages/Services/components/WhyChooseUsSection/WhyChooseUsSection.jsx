@@ -46,7 +46,7 @@ export default function WhyChooseUsSection() {
           {features.map((feature, idx) => (
             <motion.div
               key={idx}
-              className="bg-darkGreen p-6 rounded-xl border border-[#004e3a] hover:border-caribbeanGreen shadow-md hover:shadow-neonGreen transition duration-300"
+              className="bg-darkGreen p-6 rounded-xl border border-[#ffffff] hover:border-caribbeanGreen shadow-md hover:shadow-neonGreen transition duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}

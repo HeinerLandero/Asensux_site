@@ -78,7 +78,7 @@ export default function ServicesSection() {
                 {services.map((s, i) => (
                     <motion.div
                         key={s.title}
-                        className="bg-richBlack/50 backdrop-blur-md border border-white/10 rounded-2xl p-8 flex flex-col gap-4 hover:shadow-[0_0_25px_rgba(0,223,129,0.4)] transition duration-300 group"
+                        className="bg-richBlack/50 backdrop-blur-md border border-white/10 rounded-2xl p-8 flex flex-col gap-4 shadow-[0_0_20px_0_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_2px_rgba(255,255,255,0.4)] transition duration-300 group"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 + i * 0.1, duration: 0.7 }}

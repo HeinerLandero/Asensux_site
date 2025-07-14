@@ -64,7 +64,7 @@ export default function WorkProcessSection() {
                     {steps.map((step, i) => (
                         <motion.div
                             key={i}
-                            className="bg-darkGreen p-6 rounded-xl border border-[#004e3a] text-left shadow-sm hover:shadow-[0_0_25px_rgba(0,223,129,0.2)] transition-all duration-300 hover:scale-105"
+                            className="bg-darkGreen p-6 rounded-xl border border-[#ffffff] text-left shadow-sm hover:shadow-[0_0_30px_2px_rgba(255,255,255,0.4)] transition-all duration-300 hover:scale-105"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.1, duration: 0.4 }}

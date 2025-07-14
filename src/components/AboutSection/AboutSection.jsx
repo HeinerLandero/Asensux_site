@@ -64,7 +64,7 @@ export default function AboutSection() {
         {features.map((f, i) => (
           <motion.div
             key={f.title}
-            className="group flex flex-col items-center text-center p-10 rounded-3xl bg-darkGreen/40 backdrop-blur-md border border-white/10 shadow-[0_0_20px_0_rgba(0,223,129,0.25)] hover:shadow-[0_0_30px_2px_rgba(0,223,129,0.45)] transition duration-300"
+            className="group flex flex-col items-center text-center p-10 rounded-3xl bg-darkGreen/40 backdrop-blur-md border border-white/10 shadow-[0_0_20px_0_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_2px_rgba(255,255,255,0.4)] transition duration-300"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 + i * 0.15, duration: 0.7 }}

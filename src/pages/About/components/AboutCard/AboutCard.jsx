@@ -11,7 +11,7 @@ export default function AboutCard({ title, icon, text, index }) {
         delay: index * 0.2,
       }}
       viewport={{ once: true }}
-      className="bg-gradient-to-b from-darkGreen to-richBlack p-6 rounded-2xl border border-[#004e3a] shadow-xl transition-all duration-300 hover:border-caribbeanGreen hover:shadow-neonGreen"
+      className="bg-gradient-to-b from-darkGreen to-richBlack p-6 rounded-2xl border border-[#ffffff] shadow-xl transition-all duration-300 hover:border-caribbeanGreen hover:shadow-neonGreen"
     >
       <div className="flex items-center justify-center mb-4">
         <div className="text-4xl bg-[#00392c] text-caribbeanGreen rounded-full p-4 shadow-md">

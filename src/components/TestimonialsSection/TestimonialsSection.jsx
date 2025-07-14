@@ -7,12 +7,12 @@ const testimonials = [
     {
         name: "Camila R.",
         role: "CEO en Startify",
-        text: "Con Asensux logramos lanzar nuestro producto 3 veces más rápido. Su enfoque en calidad y diseño fue clave para nuestro éxito.",
+        text: "Con kambio logramos lanzar nuestro producto 3 veces más rápido. Su enfoque en calidad y diseño fue clave para nuestro éxito.",
     },
     {
         name: "Luis M.",
         role: "CTO en NovaTech",
-        text: "El equipo de Asensux nos brindó una infraestructura escalable y segura. Desde entonces, no hemos tenido caídas.",
+        text: "El equipo de kambio nos brindó una infraestructura escalable y segura. Desde entonces, no hemos tenido caídas.",
     },
     {
         name: "Valeria T.",
@@ -63,11 +63,11 @@ export default function TestimonialsCarousel() {
                 </h2>
 
                 {/* 🚫 No pongas animación en este div */}
-                <div ref={sliderRef} className="keen-slider">
+                <div ref={sliderRef} className="keen-slider hover:overflow-y-visible py-2">
                     {testimonials.map((t, i) => (
                         <div
                             key={i}
-                            className="keen-slider__slide bg-darkGreen p-8 rounded-xl border border-[#004e3a] shadow-md hover:shadow-[0_0_25px_rgba(0,223,129,0.25)] transition-all duration-300 hover:scale-[1.02]"
+                            className="keen-slider__slide bg-darkGreen p-8 rounded-xl border border-[#ffffff] shadow-md transition-all duration-300 hover:scale-[1.02]"
                         >
                             <motion.p
                                 className="text-gray-300 italic mb-6 text-lg leading-relaxed"

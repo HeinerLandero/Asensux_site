@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --color-background: #002b1b;
+  --color-background: #04043d;
   --color-foreground: #f1f7f6;
 }
 
@@ -21,7 +21,7 @@
 
   a {
     font-weight: 500;
-    color: #00df81;
+    color: white;
     text-underline-offset: 4px;
   }
 

@@ -18,7 +18,7 @@ export default function CallToAction() {
                     transition={{ duration: 0.5 }}
                 >
                     ¿Listo para impulsar tu negocio con{" "}
-                    <span className="text-caribbeanGreen">Asensux</span>?
+                    <span className="text-caribbeanGreen">kambio</span>?
                 </motion.h2>
 
                 <motion.p
