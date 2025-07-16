@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../../layouts/Header/Header.scss';
 import { Link, NavLink } from "react-router-dom";
 import logoDesktop from "@/assets/images/kambio-main-logo-white-resize.png";
 import logoMobile from "@/assets/images/kambio-logo-white.png";
@@ -45,9 +46,7 @@ export default function Header() {
               end={end}
               className={({ isActive }) =>
                 `relative px-3 py-2 text-base font-medium transition duration-300
-                 ${isActive ? 'text-caribbeanGreen' : 'text-antiFlashWhite hover:text-caribbeanGreen'}
-                 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0
-                 after:h-[2px] after:bg-caribbeanGreen hover:after:w-full after:transition-all after:duration-300`
+                 ${isActive ? 'text-caribbeanGreen' : 'text-antiFlashWhite hover:text-caribbeanGreen'}`
               }
             >
               {label}

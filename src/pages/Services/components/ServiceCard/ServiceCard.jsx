@@ -9,7 +9,7 @@ export default function ServiceCard({ title, icon, text }) {
       className="bg-gradient-to-b from-darkGreen to-richBlack p-6 rounded-2xl border border-[#ffffff] shadow-xl"
     >
       <div className="flex items-center justify-center mb-4">
-        <div className="text-4xl bg-[#00392c] text-caribbeanGreen rounded-full p-4 shadow-md">
+        <div className="text-4xl bg-[#0c0039] text-caribbeanGreen rounded-full p-4 shadow-md">
           {icon}
         </div>
       </div>

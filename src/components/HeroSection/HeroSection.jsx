@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import '../HeroSection/HeroSection.scss'
 
 export default function Hero() {
     return (
         <section className=" relative bg-gradient-to-r from-richBlack to-black to-darkGreen text-antiFlashWhite min-h-[100vh] flex flex-col justify-center items-center text-center px-4 z-0">
-            <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-cover pointer-events-none"></div>
+            <div className="overlay-hero inset-0 pointer-events-none "></div>
+
             <div className="max-w-4xl mx-auto z-10">
                 {/* <motion.img
                     src={logo}
@@ -21,7 +23,7 @@ export default function Hero() {
                     transition={{ delay: 0.3, duration: 0.6 }}
                 >
                     Transformamos tu negocio con{" "}
-                    <span className="text-caribbeanGreen">
+                    <span className="intro-text">
                         soluciones tecnológicas innovadoras
                     </span>
                 </motion.h1>

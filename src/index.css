@@ -25,9 +25,6 @@
     text-underline-offset: 4px;
   }
 
-  a:hover {
-    text-decoration: underline;
-  }
 
   h1,
   h2,
@@ -39,7 +36,25 @@
   }
 }
 
-.dark body {
-  background-color: #032221;
-  color: #f1f7f6;
+.intro-text {
+  font-weight: bold;
+  background: linear-gradient(250deg, #63a763, #24bcea);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: rotateGradient 5s linear infinite;
 }
+
+ @keyframes rotateGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
