@@ -1,10 +1,11 @@
 import clsx from "clsx";
+import '../UI/button.scss';
 
 export const Button = ({ children, className, ...props }) => {
   return (
     <button
       className={clsx(
-        "bg-primary text-white hover:bg-primary/80 rounded-base px-6 py-3",
+        "button-custom px-6 py-3 m-auto",
         className
       )}
       {...props}

@@ -10,7 +10,7 @@ export default function Hero() {
             <div className="max-w-4xl mx-auto z-10">
                 {/* <motion.img
                     src={logo}
-                    alt="Logo kambio"
+                    alt="Logo Asensux"
                     className="mx-auto w-32 mb-8 drop-shadow-lg"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}

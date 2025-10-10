@@ -1,8 +1,8 @@
 import { useState } from "react";
 import '../../layouts/Header/Header.scss';
 import { Link, NavLink } from "react-router-dom";
-import logoDesktop from "@/assets/images/kambio-main-logo-white-resize.png";
-import logoMobile from "@/assets/images/kambio-logo-white.png";
+import logoDesktop from "@/assets/logos/main-logo.png";
+import logoMobile from "@/assets/logos/main-logo-mobile.png";
 
 
 export default function Header() {
@@ -12,7 +12,7 @@ export default function Header() {
     { to: "/", label: "Inicio", end: true },
     { to: "/nosotros", label: "Nosotros" },
     { to: "/servicios", label: "Servicios" },
-    { to: "/proyectos", label: "Proyectos" },
+    { to: "/productos", label: "Productos" },
     { to: "/blog", label: "Blog" },
     { to: "/contacto", label: "Contacto" },
   ];
@@ -25,14 +25,14 @@ export default function Header() {
           {/* Desktop logo */}
           <img
             src={logoDesktop}
-            alt="Logo Kambio"
+            alt="Logo Asensux"
             className="hidden md:block mx-auto w-48 drop-shadow-lg"
           />
 
           {/* Mobile logo */}
           <img
             src={logoMobile}
-            alt="Logo Kambio Mobile"
+            alt="Logo Asensux Mobile"
             className="block md:hidden mx-auto w-16 drop-shadow-md"
           />
         </Link>

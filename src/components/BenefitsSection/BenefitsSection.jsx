@@ -18,7 +18,7 @@ export default function BenefitsSection() {
         <section className="bg-darkGreen  bg-gradient-to-r from-richBlack to-black py-20 px-6 text-antiFlashWhite">
             <div className="max-w-5xl mx-auto text-center">
                 <h2 className="text-3xl md:text-5xl font-bold mb-12">
-                    ¿Por qué elegir <span className="text-caribbeanGreen">kambio</span>?
+                    ¿Por qué elegir <span className="text-caribbeanGreen">Asensux</span>?
                 </h2>
                 <div className="grid md:grid-cols-3 gap-10">
                     {benefits.map((b, i) => (

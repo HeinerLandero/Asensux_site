@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "¿Qué tipo de soluciones ofrece kambio?",
+    question: "¿Qué tipo de soluciones ofrece Asensux?",
     answer:
       "Ofrecemos desarrollo web, apps móviles, sistemas administrativos y herramientas personalizadas para automatizar procesos empresariales.",
   },
   {
-    question: "¿kambio trabaja con startups?",
+    question: "¿Asensux trabaja con startups?",
     answer:
       "Sí, ayudamos a startups a lanzar sus productos digitales rápidamente con una base tecnológica sólida y escalable.",
   },

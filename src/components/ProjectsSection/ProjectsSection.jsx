@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 const projects = [
     {
-        title: "kambio Manager",
-        image: "src/assets/images/kambio-main-logo.jpg",
+        title: "Asensux Manager",
+        image: "/projects/asensux-manager.png",
         description: "Sistema de gestión empresarial completo: tareas, proyectos, equipos y clientes.",
     },
     {

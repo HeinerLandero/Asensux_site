@@ -31,7 +31,7 @@ export default function CallToActionSection() {
           transition={{ delay: 0.1, duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Hablemos sobre tu idea. El equipo de <strong>kambio</strong> está listo para construir algo increíble contigo.
+          Hablemos sobre tu idea. El equipo de <strong>Asensux</strong> está listo para construir algo increíble contigo.
         </motion.p>
 
         <motion.div

@@ -7,12 +7,12 @@ const testimonials = [
     {
         name: "Camila R.",
         role: "CEO en Startify",
-        text: "Con kambio logramos lanzar nuestro producto 3 veces más rápido. Su enfoque en calidad y diseño fue clave para nuestro éxito.",
+        text: "Con Asensux logramos lanzar nuestro producto 3 veces más rápido. Su enfoque en calidad y diseño fue clave para nuestro éxito.",
     },
     {
         name: "Luis M.",
         role: "CTO en NovaTech",
-        text: "El equipo de kambio nos brindó una infraestructura escalable y segura. Desde entonces, no hemos tenido caídas.",
+        text: "El equipo de Asensux nos brindó una infraestructura escalable y segura. Desde entonces, no hemos tenido caídas.",
     },
     {
         name: "Valeria T.",
@@ -52,7 +52,7 @@ export default function TestimonialsCarousel() {
     return (
         <section className="bg-gradient-to-r from-richBlack to-black py-20 px-6 text-antiFlashWhite">
             <motion.div
-                className="max-w-4xl mx-auto text-center"
+                className="max-w-5xl mx-auto text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
