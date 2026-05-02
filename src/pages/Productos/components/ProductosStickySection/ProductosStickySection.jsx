@@ -1,13 +1,14 @@
+import mockupImg from "@/assets/images/mockup-desktop-inventory.png";
+
 export default function ProductosStickySection() {
   return (
     <section
       className="relative h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `url('src/assets/images/mockup-desktop-inventory.png')`,
+        backgroundImage: `url(${mockupImg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-        clipPath: 'polygon(100% 1%, 101% 70%, -8% -8% 95%, -33% 44%)'
+        clipPath: 'polygon(0 10%, 100% 0, 100% 100%, 0 90%)'
       }}
     >
       <div className="absolute inset-0 bg-black/60"></div>

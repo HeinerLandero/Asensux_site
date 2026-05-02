@@ -13,6 +13,7 @@ export default function Header() {
     { to: "/nosotros", label: "Nosotros" },
     { to: "/servicios", label: "Servicios" },
     { to: "/productos", label: "Productos" },
+    { to: "/portafolio", label: "Portafolio" },
     { to: "/blog", label: "Blog" },
     { to: "/contacto", label: "Contacto" },
   ];
@@ -59,6 +60,7 @@ export default function Header() {
           className="md:hidden text-antiFlashWhite focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             <path

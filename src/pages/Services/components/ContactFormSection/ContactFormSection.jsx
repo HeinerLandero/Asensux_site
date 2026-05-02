@@ -16,7 +16,7 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Formulario enviado:", form);
-    // Aquí iría la lógica para enviar los datos a un backend o servicio externo
+    setForm({ nombre: "", empresa: "", correo: "", razon: "", mensaje: "" });
   };
 
   return (
@@ -102,7 +102,7 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="bg-caribbeanGreen text-richBlack font-bold py-3 px-6 rounded-md transition-all duration-300 hover:bg-[#0c0039] hover:scale-105 shadow-md"
+            className="bg-caribbeanGreen text-richBlack font-bold py-3 px-6 rounded-md transition-all duration-300 hover:bg-caribbeanGreen/80 hover:scale-105 shadow-md"
           >
             Enviar mensaje
           </button>

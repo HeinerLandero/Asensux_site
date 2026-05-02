@@ -15,7 +15,7 @@ export default function BenefitsSection() {
     ];
 
     return (
-        <section className="bg-darkGreen  bg-gradient-to-r from-richBlack to-black py-20 px-6 text-antiFlashWhite">
+        <section className="bg-gradient-to-r from-richBlack to-black py-20 px-6 text-antiFlashWhite">
             <div className="max-w-5xl mx-auto text-center">
                 <h2 className="text-3xl md:text-5xl font-bold mb-12">
                     ¿Por qué elegir <span className="text-caribbeanGreen">Asensux</span>?

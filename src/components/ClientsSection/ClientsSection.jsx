@@ -1,15 +1,16 @@
-// src/sections/ClientsSection.tsx
+import logoCliente from "@/assets/logos/logo-cliente-asensux-wb.png";
+
 const clients = [
-    { name: "NovaTech", logo: "src/assets/logos/logo-cliente-asensux-wb.png" },
-    { name: "Startify", logo: "src/assets/logos/logo-cliente-asensux-wb.png" },
-    { name: "Uplift", logo: "src/assets/logos/logo-cliente-asensux-wb.png" },
-    { name: "OmniCore", logo: "src/assets/logos/logo-cliente-asensux-wb.png" },
-    { name: "DataNest", logo: "src/assets/logos/logo-cliente-asensux-wb.png" },
+    { name: "NovaTech", logo: logoCliente },
+    { name: "Startify", logo: logoCliente },
+    { name: "Uplift", logo: logoCliente },
+    { name: "OmniCore", logo: logoCliente },
+    { name: "DataNest", logo: logoCliente },
 ];
 
 export default function ClientsSection() {
     return (
-        <section className="bg-gradient-to-r from-richBlack to-black bg-richBlack py-20 px-6 text-antiFlashWhite">
+        <section className="bg-gradient-to-r from-richBlack to-black py-20 px-6 text-antiFlashWhite">
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">
                     Empresas que <span className="text-caribbeanGreen">confían</span> en nosotros
@@ -20,10 +21,10 @@ export default function ClientsSection() {
 
                 <div className="flex flex-wrap justify-center items-center gap-10 mt-10">
                     {clients.map((client, index) => (
-                        <div key={index} className="w-32 h-16 flex items-center justify-center  hover:grayscale-0 transition duration-300">
+                        <div key={index} className="w-32 h-16 flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
                             <img
                                 src={client.logo}
-                                alt={client.name}
+                                alt={`Logo de ${client.name}`}
                                 className="max-h-full object-contain"
                             />
                         </div>

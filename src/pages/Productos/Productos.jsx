@@ -1,15 +1,17 @@
-import './Productos.scss';
+import mockupImg from "@/assets/images/mockup-desktop-inventory.png";
+import demoGif from "@/assets/images/demo-asensux.gif";
+import { Link } from "react-router-dom";
+import { ctaBase } from "@/styles/cta";
 import ProductosIntro from './components/ProductosIntro/ProductosIntro';
 import ProductosStickySection from './components/ProductosStickySection/ProductosStickySection';
 import ProductosFeatures from './components/ProductosFeatures/ProductosFeatures';
 import ProductosPricing from './components/ProductosPricing/ProductosPricing';
-import { Button } from "@/components/ui/button";
 
 export default function Productos() {
   return (
     <>
       <ProductosIntro />
-      <section className="bg-gradient-to-r from-richBlack to-black bg-richBlack text-antiFlashWhite py-20 px-6">
+      <section className="bg-gradient-to-r from-richBlack to-black text-antiFlashWhite py-20 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Asensux Inventory Showcase */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -23,26 +25,25 @@ export default function Productos() {
                 "Optimiza tus ventas, evita pérdidas y gestiona tu inventario de forma inteligente."
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-caribbeanGreen hover:bg-caribbeanGreen/80 text-black font-semibold px-8 py-4 rounded-xl shadow-lg"
+                <Link
+                  to="/contacto"
+                  className={ctaBase}
                 >
                   Prueba gratis hoy
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-caribbeanGreen text-caribbeanGreen hover:bg-caribbeanGreen hover:text-black px-8 py-4 rounded-xl"
+                </Link>
+                <Link
+                  to="/productos#demo"
+                  className={ctaBase}
                 >
                   Ver en acción
-                </Button>
+                </Link>
               </div>
             </div>
 
             {/* Right side - Image */}
             <div className="flex justify-center">
               <img
-                src="src/assets/images/mockup-desktop-inventory.png"
+                src={mockupImg}
                 alt="Asensux Inventory Mockup"
                 className="max-w-full h-auto rounded-xl shadow-2xl"
               />
@@ -58,7 +59,7 @@ export default function Productos() {
             {/* Left side - Image */}
             <div className="flex justify-center order-2 lg:order-1">
               <img
-                src="src/assets/images/demo-asensux.gif"
+                src={demoGif}
                 alt="Asensux Inventory Demo"
                 className="max-w-full h-auto rounded-xl shadow-2xl"
               />

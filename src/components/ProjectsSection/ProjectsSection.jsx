@@ -1,19 +1,20 @@
 import { motion } from "framer-motion";
+import kambioLogo from "@/assets/images/kambio-main-logo.svg";
 
 const projects = [
     {
         title: "Asensux Manager",
-        image: "/projects/asensux-manager.png",
+        image: kambioLogo,
         description: "Sistema de gestión empresarial completo: tareas, proyectos, equipos y clientes.",
     },
     {
         title: "UpTranslink",
-        image: "src/assets/images/kambio-main-logo.jpg",
+        image: kambioLogo,
         description: "Plataforma de transporte inteligente para gestión de rutas y movilidad urbana.",
     },
     {
         title: "Landing AI SaaS",
-        image: "src/assets/images/kambio-main-logo.jpg",
+        image: kambioLogo,
         description: "Sitio web promocional para producto basado en inteligencia artificial.",
     },
 ];
@@ -22,7 +23,7 @@ export default function ProjectsSection() {
     return (
         <section
             id="projects"
-            className="relative bg-gradient-to-r from-richBlack to-black  bg-darkGreen py-24 px-6 text-white"
+            className="relative bg-gradient-to-r from-richBlack to-black py-24 px-6 text-white"
         >
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5 pointer-events-none" />
 
@@ -65,7 +66,7 @@ export default function ProjectsSection() {
                                 alt={project.title}
                                 className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div className="absolute inset-0 bg-black/60 flex items-end p-6">
                                 <div>
                                     <h3 className="text-lg font-semibold text-white mb-1">
                                         {project.title}

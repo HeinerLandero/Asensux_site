@@ -1,20 +1,21 @@
 import { motion } from "framer-motion";
 import ServiceCard from "../ServiceCard/ServiceCard";
+import { Globe, Cog, Cloud } from "lucide-react";
 
 const services = [
   {
     title: "Desarrollo Web",
-    icon: "🌐",
+    icon: Globe,
     text: "Creamos sitios y aplicaciones modernas, rápidas y seguras.",
   },
   {
     title: "Transformación Digital",
-    icon: "⚙️",
+    icon: Cog,
     text: "Ayudamos a migrar tus procesos tradicionales al mundo digital.",
   },
   {
     title: "Infraestructura Cloud",
-    icon: "☁️",
+    icon: Cloud,
     text: "Diseñamos arquitecturas escalables y seguras en la nube.",
   },
 ];

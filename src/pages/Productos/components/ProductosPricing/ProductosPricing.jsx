@@ -1,10 +1,12 @@
 import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ctaBase } from "@/styles/cta";
 
 const plans = [
   {
     name: "Gratis",
-    price: "Gratis por 1 mes",
+    price: "Gratis",
+    pricePeriod: "por 1 mes",
     description: "Prueba todas las funcionalidades básicas",
     features: [
       "Generación de inventario",
@@ -17,7 +19,8 @@ const plans = [
   },
   {
     name: "Basic",
-    price: "$12.000/mes",
+    price: "$12.000",
+    pricePeriod: "/mes",
     description: "Perfecto para pequeños negocios",
     features: [
       "Todas las funcionalidades",
@@ -29,10 +32,10 @@ const plans = [
   },
   {
     name: "Business",
-    price: "$20.000/mes",
+    price: "$20.000",
+    pricePeriod: "/mes",
     description: "Para empresas en crecimiento",
     features: [
-      "1 Usuario maestro",
       "Módulo de cotización",
       "Todas las funcionalidades",
       "9 Colaboradores",
@@ -46,9 +49,10 @@ const plans = [
   {
     name: "Enterprise",
     price: "Personalizado",
+    pricePeriod: "",
     description: "Soluciones a medida",
     features: [
-      "Todas las funcionalidades del Business",
+      "Todo lo de Business",
       "Usuarios ilimitados",
       "Integraciones personalizadas",
       "Soporte 24/7",
@@ -61,52 +65,57 @@ const plans = [
 
 export default function ProductosPricing() {
   return (
-    <section className="bg-gradient-to-r from-richBlack to-black bg-richBlack text-antiFlashWhite py-20 px-6">
+    <section className="bg-gradient-to-r from-richBlack to-black text-antiFlashWhite py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center mb-4">
           Planes y <span className="text-caribbeanGreen">Precios</span>
         </h2>
+        <p className="text-stone text-center mb-16 max-w-lg mx-auto">
+          Empieza gratis. Escala cuando lo necesites. Sin compromisos.
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {plans.map((plan, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+          {plans.map((plan) => (
             <div
-              key={index}
-              className={`relative flex flex-col bg-gradient-to-br from-darkGreen/80 to-darkGreen/40 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-caribbeanGreen/20 transition-all duration-500 hover:-translate-y-2 border ${
-                plan.popular ? 'border-caribbeanGreen ring-2 ring-caribbeanGreen/50' : 'border-darkGreen/50 hover:border-caribbeanGreen/30'
+              key={plan.name}
+              className={`relative flex flex-col bg-darkGreen/40 p-8 rounded-2xl transition-all duration-300 border ${
+                plan.popular
+                  ? 'border-caribbeanGreen bg-caribbeanGreen/5'
+                  : 'border-white/5 hover:border-white/10'
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-white text-black px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
-                    Más Popular
+                <div className="mb-4">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-caribbeanGreen bg-caribbeanGreen/10 px-3 py-1 rounded">
+                    Recomendado
                   </span>
                 </div>
               )}
 
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                <div className="text-3xl font-bold text-caribbeanGreen mb-2">{plan.price}</div>
-                <p className="text-gray-300 text-sm">{plan.description}</p>
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold text-white mb-3">{plan.name}</h3>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-3xl font-bold text-caribbeanGreen">{plan.price}</span>
+                  {plan.pricePeriod && <span className="text-stone text-sm">{plan.pricePeriod}</span>}
+                </div>
+                <p className="text-stone text-sm mt-2">{plan.description}</p>
               </div>
 
-              <ul className="space-y-3 mb-8">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center">
-                    <Check className="w-5 h-5 text-caribbeanGreen mr-3 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">{feature}</span>
+              <ul className="space-y-3 mb-8 flex-grow">
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-3">
+                    <Check className="w-4 h-4 text-caribbeanGreen mt-0.5 flex-shrink-0" />
+                    <span className="text-antiFlashWhite/70 text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>
 
-              <Button
-                className={`w-full mt-auto ${
-                  plan.popular
-                    ? 'bg-caribbeanGreen hover:bg-caribbeanGreen/80 text-black'
-                    : 'bg-transparent border border-caribbeanGreen text-caribbeanGreen hover:bg-caribbeanGreen hover:text-black'
-                } font-semibold py-3 rounded-xl transition`}
+              <Link
+                to="/contacto"
+                className={`${ctaBase} w-full text-center`}
               >
                 {plan.buttonText}
-              </Button>
+              </Link>
             </div>
           ))}
         </div>

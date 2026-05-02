@@ -26,7 +26,7 @@ export default function TechStackSection() {
     ];
 
     return (
-        <section className="bg-gradient-to-r from-richBlack to-black bg-darkGreen py-20 px-6 text-center text-antiFlashWhite">
+        <section className="bg-gradient-to-r from-richBlack to-black py-20 px-6 text-center text-antiFlashWhite">
             <motion.div
                 className="max-w-6xl mx-auto"
                 initial="hidden"

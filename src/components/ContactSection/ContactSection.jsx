@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button"; // si usas shadcn/ui
+import { Link } from "react-router-dom";
+import { ctaBase } from "@/styles/cta";
 
 export default function CallToActionSection() {
   return (
     <section
       id="cta"
-      className="relative relative bg-gradient-to-r from-richBlack to-black  bg-richBlack py-24 px-6 text-white overflow-hidden"
+      className="relative bg-gradient-to-r from-richBlack to-black py-24 px-6 text-white overflow-hidden"
     >
       {/* Patrón de fondo y luz */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.04] pointer-events-none" />
@@ -40,12 +40,12 @@ export default function CallToActionSection() {
           transition={{ delay: 0.2, duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <Button
-            size="lg"
-            className="bg-caribbeanGreen hover:bg-caribbeanGreen/80 text-black font-semibold text-base px-6 py-3 rounded-xl shadow-[0_0_20px_0_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_2px_rgba(255,255,255,0.4)] transition"
+          <Link
+            to="/contacto"
+            className={ctaBase}
           >
-            Contáctanos <ArrowRight className="inline ml-2 w-4 h-4" />
-          </Button>
+            Contáctanos
+          </Link>
         </motion.div>
       </div>
     </section>

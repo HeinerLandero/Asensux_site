@@ -1,4 +1,3 @@
-// src/pages/Services/components/ServicesIntro.jsx
 import { motion } from "framer-motion";
 
 export default function ServicesIntro() {

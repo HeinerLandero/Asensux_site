@@ -1,4 +1,3 @@
-// src/pages/Services/components/WhyChooseUsSection.tsx
 import { motion } from "framer-motion";
 import { FaCheckCircle, FaClock, FaUserShield, FaBolt } from "react-icons/fa";
 
@@ -27,7 +26,7 @@ const features = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="to-richBlack text-antiFlashWhite py-20 px-6">
+    <section className="bg-richBlack text-antiFlashWhite py-20 px-6">
       <motion.div
         className="max-w-6xl mx-auto text-center"
         initial={{ opacity: 0, y: 40 }}

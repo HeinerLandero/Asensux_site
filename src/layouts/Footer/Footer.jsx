@@ -39,7 +39,7 @@ export default function Footer() {
 
         <div className="flex space-x-4 text-lg">
           <a
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/asensux"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-caribbeanGreen transition-colors duration-300"
@@ -48,7 +48,7 @@ export default function Footer() {
             <FaFacebookF />
           </a>
           <a
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/asensux"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-caribbeanGreen transition-colors duration-300"
@@ -57,7 +57,7 @@ export default function Footer() {
             <FaInstagram />
           </a>
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/company/asensux"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-caribbeanGreen transition-colors duration-300"

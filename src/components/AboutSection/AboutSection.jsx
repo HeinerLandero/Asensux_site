@@ -27,7 +27,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative bg-gradient-to-r from-richBlack to-black  py-24 bg-richBlack text-antiFlashWhite flex flex-col items-center px-6 overflow-hidden"
+      className="relative bg-gradient-to-r from-richBlack to-black py-24 text-antiFlashWhite flex flex-col items-center px-6 overflow-hidden"
     >
       {/* grid decorativa */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.04] pointer-events-none" />
@@ -69,7 +69,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 + i * 0.15, duration: 0.7 }}
             viewport={{ once: true }}
-            whileHover={{ translateY: -6, scale: 1.03 }}
+            whileHover={{ y: -6, scale: 1.03 }}
           >
             {f.icon}
             <h3 className="font-semibold text-2xl mt-6 mb-3 text-antiFlashWhite">

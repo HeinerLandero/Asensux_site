@@ -1,0 +1,1 @@
+export const ctaBase = "inline-block bg-caribbeanGreen hover:bg-caribbeanGreen/80 active:scale-[0.98] font-semibold text-base px-8 py-4 rounded-xl shadow-[0_0_20px_0_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_2px_rgba(255,255,255,0.4)] focus-visible:ring-2 focus-visible:ring-caribbeanGreen focus-visible:ring-offset-2 focus-visible:ring-offset-richBlack transition-all";

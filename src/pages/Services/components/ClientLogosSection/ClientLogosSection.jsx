@@ -1,4 +1,3 @@
-// src/pages/Services/components/ClientLogosSection.tsx
 import { motion } from "framer-motion";
 import {
   FaGoogle,
@@ -20,7 +19,7 @@ const logos = [
 
 export default function ClientLogosSection() {
   return (
-    <section className="bg-gradient-to-r from-richBlack py-20 px-6">
+    <section className="bg-gradient-to-r py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-antiFlashWhite mb-10">
           Empresas que <span className="text-caribbeanGreen">confían</span> en nosotros

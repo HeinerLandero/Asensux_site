@@ -30,7 +30,7 @@ const features = [
 
 export default function ProductosFeatures() {
   return (
-    <section className="bg-gradient-to-r from-richBlack to-black bg-richBlack text-antiFlashWhite py-20 px-6">
+    <section className="bg-gradient-to-r from-richBlack to-black text-antiFlashWhite py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
           Características <span className="text-caribbeanGreen">destacadas</span>

@@ -51,6 +51,8 @@ export default function FAQSection() {
               <button
                 onClick={() => toggle(index)}
                 className="w-full text-left flex justify-between items-center focus:outline-none"
+                aria-expanded={activeIndex === index}
+                aria-controls={`faq-answer-${index}`}
               >
                 <span className="text-lg font-medium">{faq.question}</span>
                 <motion.span
@@ -66,11 +68,13 @@ export default function FAQSection() {
                 {activeIndex === index && (
                   <motion.p
                     key="answer"
+                    id={`faq-answer-${index}`}
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="mt-4 text-gray-300 overflow-hidden"
+                    role="region"
                   >
                     {faq.answer}
                   </motion.p>

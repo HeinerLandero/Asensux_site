@@ -1,105 +1,59 @@
-import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react";
-import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const testimonials = [
     {
-        name: "Camila R.",
-        role: "CEO en Startify",
-        text: "Con Asensux logramos lanzar nuestro producto 3 veces más rápido. Su enfoque en calidad y diseño fue clave para nuestro éxito.",
+        name: "Camila Restrepo",
+        role: "CEO, Startify",
+        text: "Lanzamos nuestro producto 3 veces más rápido de lo previsto. El equipo entendió el problema desde el primer día y entregó exactamente lo que necesitábamos.",
     },
     {
-        name: "Luis M.",
-        role: "CTO en NovaTech",
-        text: "El equipo de Asensux nos brindó una infraestructura escalable y segura. Desde entonces, no hemos tenido caídas.",
+        name: "Luis Mendoza",
+        role: "CTO, NovaTech",
+        text: "La infraestructura que nos construyeron lleva 8 meses sin una sola caída. Eso para nosotros es tranquilidad pura.",
     },
     {
-        name: "Valeria T.",
-        role: "Marketing Lead en Uplift",
-        text: "Una experiencia increíble. Comunicación clara, entregas a tiempo y resultados que superaron nuestras expectativas.",
+        name: "Valeria Torres",
+        role: "Marketing Lead, Uplift",
+        text: "Entregas a tiempo, comunicación directa y un producto final que superó lo que teníamos en mente. Raro de encontrar.",
     },
 ];
 
-export default function TestimonialsCarousel() {
-    const timer = useRef(null);
-
-    const [sliderRef, instanceRef] = useKeenSlider({
-        loop: true,
-        renderMode: "performance",
-        slides: {
-            perView: 1,
-            spacing: 16,
-        },
-        breakpoints: {
-            "(min-width: 768px)": {
-                slides: { perView: 2, spacing: 24 },
-            },
-        },
-    });
-
-    useEffect(() => {
-        if (instanceRef.current) {
-            timer.current = setInterval(() => {
-                instanceRef.current?.next();
-            }, 6000);
-        }
-        return () => {
-            clearInterval(timer.current);
-        };
-    }, [instanceRef]);
-
+export default function TestimonialsSection() {
     return (
         <section className="bg-gradient-to-r from-richBlack to-black py-20 px-6 text-antiFlashWhite">
-            <motion.div
-                className="max-w-5xl mx-auto text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-            >
-                <h2 className="text-3xl md:text-5xl font-bold mb-12">
+            <div className="max-w-5xl mx-auto text-center">
+                <motion.h2
+                    className="text-3xl md:text-5xl font-bold tracking-tight mb-12"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                >
                     Lo que dicen nuestros <span className="text-caribbeanGreen">clientes</span>
-                </h2>
+                </motion.h2>
 
-                {/* 🚫 No pongas animación en este div */}
-                <div ref={sliderRef} className="keen-slider hover:overflow-y-visible py-2">
+                {/* Static grid — no carousel, no dots */}
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {testimonials.map((t, i) => (
-                        <div
-                            key={i}
-                            className="keen-slider__slide bg-darkGreen p-8 rounded-xl border border-[#ffffff] shadow-md transition-all duration-300 hover:scale-[1.02]"
+                        <motion.div
+                            key={t.name}
+                            className="bg-darkGreen/60 p-8 rounded-2xl border border-white/5 hover:border-caribbeanGreen/20 transition-colors duration-300 text-left"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.12, duration: 0.5 }}
+                            viewport={{ once: true }}
                         >
-                            <motion.p
-                                className="text-gray-300 italic mb-6 text-lg leading-relaxed"
-                                initial={{ opacity: 0, y: 10 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.4, delay: i * 0.2 }}
-                                viewport={{ once: true }}
-                            >
-                                “{t.text}”
-                            </motion.p>
-                            <motion.div
-                                className="text-caribbeanGreen font-semibold text-lg"
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                transition={{ delay: i * 0.25 + 0.2 }}
-                                viewport={{ once: true }}
-                            >
-                                {t.name}
-                            </motion.div>
-                            <motion.div
-                                className="text-sm text-stone"
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                transition={{ delay: i * 0.25 + 0.4 }}
-                                viewport={{ once: true }}
-                            >
-                                {t.role}
-                            </motion.div>
-                        </div>
+                            <p className="text-antiFlashWhite/80 leading-relaxed mb-6">
+                                &ldquo;{t.text}&rdquo;
+                            </p>
+                            <div>
+                                <div className="font-semibold text-caribbeanGreen">{t.name}</div>
+                                <div className="text-sm text-stone">{t.role}</div>
+                            </div>
+                        </motion.div>
                     ))}
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 }

@@ -11,7 +11,7 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/App.jsx", "src/routes/AppRouter.jsx", "src/main.jsx"],
+  "include": ["src/**/*.{js,jsx,ts,tsx}"],
   "exclude": ["node_modules", "dist"]
 }
 

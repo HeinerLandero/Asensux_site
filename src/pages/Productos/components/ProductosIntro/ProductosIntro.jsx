@@ -1,4 +1,3 @@
-// src/pages/Productos/components/ProductosIntro.jsx
 import { motion } from "framer-motion";
 
 export default function ProductosIntro() {
