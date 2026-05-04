@@ -45,7 +45,7 @@ export default function ServicesSection() {
     return (
         <section
             id="services"
-            className="relative bg-gradient-to-r from-richBlack to-black py-24 text-antiFlashWhite px-6"
+            className="relative bg-gradient-to-r from-richBlack to-darkGreen py-32 text-antiFlashWhite px-6"
         >
             {/* Patrón de fondo */}
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none" />

@@ -65,7 +65,7 @@ const plans = [
 
 export default function ProductosPricing() {
   return (
-    <section className="bg-gradient-to-r from-richBlack to-black text-antiFlashWhite py-20 px-6">
+    <section className="bg-gradient-to-r from-richBlack to-darkGreen text-antiFlashWhite py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center mb-4">
           Planes y <span className="text-caribbeanGreen">Precios</span>
@@ -96,7 +96,7 @@ export default function ProductosPricing() {
                 <h3 className="text-xl font-semibold text-white mb-3">{plan.name}</h3>
                 <div className="flex items-baseline gap-1">
                   <span className="text-3xl font-bold text-caribbeanGreen">{plan.price}</span>
-                  {plan.pricePeriod && <span className="text-stone text-sm">{plan.pricePeriod}</span>}
+                    {plan.pricePeriod && <span className="text-stone text-sm">{plan.pricePeriod}</span>}
                 </div>
                 <p className="text-stone text-sm mt-2">{plan.description}</p>
               </div>

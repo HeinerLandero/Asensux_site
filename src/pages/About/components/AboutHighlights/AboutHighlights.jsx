@@ -1,40 +1,45 @@
 import { motion } from "framer-motion";
 import { History, Target, Users } from "lucide-react";
-import AboutCard from "../AboutCard/AboutCard";
 
 const highlights = [
   {
+    icon: History,
     title: "Nuestra historia",
-    icon: <History className="w-5 h-5" />,
     text: "Iniciamos como un pequeño equipo con grandes ideas. Hoy trabajamos con startups y empresas que confían en nuestro compromiso.",
   },
   {
+    icon: Target,
     title: "Misión",
-    icon: <Target className="w-5 h-5" />,
     text: "Empoderar a nuestros clientes con soluciones tecnológicas sólidas y modernas que potencien su crecimiento.",
   },
   {
+    icon: Users,
     title: "Equipo",
-    icon: <Users className="w-5 h-5" />,
     text: "Somos un grupo de desarrolladores, diseñadores y estrategas apasionados por transformar ideas en realidades digitales.",
   },
 ];
 
 export default function AboutHighlights() {
   return (
-    <motion.div
-      className="grid md:grid-cols-3 gap-4"
-      initial="hidden"
-      whileInView="visible"
-      variants={{
-        hidden: {},
-        visible: { transition: { staggerChildren: 0.1 } }
-      }}
-      viewport={{ once: true }}
-    >
+    <div className="space-y-4">
       {highlights.map((item, idx) => (
-        <AboutCard key={item.title} {...item} index={idx} />
+        <motion.div
+          key={item.title}
+          className="group flex items-start gap-5 p-8 rounded-2xl border border-white/5 hover:border-caribbeanGreen/20 bg-darkGreen/20 hover:bg-darkGreen/40 transition-all duration-500"
+          initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: idx * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          viewport={{ once: true }}
+        >
+          <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-caribbeanGreen/10 flex items-center justify-center group-hover:bg-caribbeanGreen/20 transition-all">
+            <item.icon className="w-6 h-6 text-caribbeanGreen" strokeWidth={1.5} />
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-antiFlashWhite mb-2 group-hover:text-caribbeanGreen transition-colors duration-500">{item.title}</h3>
+            <p className="text-stone/60 leading-relaxed group-hover:text-stone/80 transition-colors duration-500">{item.text}</p>
+          </div>
+        </motion.div>
       ))}
-    </motion.div>
+    </div>
   );
 }

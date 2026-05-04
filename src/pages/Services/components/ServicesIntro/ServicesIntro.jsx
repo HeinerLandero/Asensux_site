@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function ServicesIntro() {
   return (
-    <section className="flex bg-gradient-to-r from-richBlack to-black intro-services h-screen justify-center items-center">
+    <section className="flex bg-gradient-to-r from-richBlack to-darkGreen h-screen justify-center items-center">
       <motion.div
         className="text-center "
         initial={{ opacity: 0, y: 50 }}
@@ -10,9 +10,9 @@ export default function ServicesIntro() {
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight  ">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
           Nuestros{" "}
-          <span className="intro-text upp relative inline-block">
+          <span className="text-caribbeanGreen relative inline-block">
             Servicios
             <motion.span
               className="absolute left-0 -bottom-1 h-[3px] w-full bg-caribbeanGreen rounded-full"

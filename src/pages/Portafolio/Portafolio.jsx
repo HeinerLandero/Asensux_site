@@ -54,7 +54,7 @@ export default function Portafolio() {
   const others = projects.filter((p) => !p.featured);
 
   return (
-    <section className="bg-gradient-to-r from-richBlack to-black text-antiFlashWhite py-28 px-6">
+    <section className="bg-gradient-to-r from-richBlack to-darkGreen text-antiFlashWhite py-32 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div

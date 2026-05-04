@@ -30,7 +30,7 @@ const features = [
 
 export default function ProductosFeatures() {
   return (
-    <section className="bg-gradient-to-r from-richBlack to-black text-antiFlashWhite py-20 px-6">
+    <section className="bg-gradient-to-r from-richBlack to-darkGreen text-antiFlashWhite py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
           Características <span className="text-caribbeanGreen">destacadas</span>
@@ -49,8 +49,8 @@ export default function ProductosFeatures() {
                   <div className="flex items-center justify-center w-16 h-16 bg-caribbeanGreen/10 rounded-xl mb-6 group-hover:bg-caribbeanGreen/20 transition-colors duration-300">
                     <IconComponent className="w-8 h-8 text-caribbeanGreen" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4 leading-tight">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-antiFlashWhite mb-4 leading-tight">{feature.title}</h3>
+                    <p className="text-stone/70 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
             );

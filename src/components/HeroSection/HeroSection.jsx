@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ctaBase } from "@/styles/cta";
-import '../HeroSection/HeroSection.scss'
 
 export default function Hero() {
     return (
-        <section className="relative bg-gradient-to-r from-richBlack to-black text-antiFlashWhite min-h-[100dvh] flex flex-col justify-center items-center text-center px-4 z-0">
+        <section className="relative bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite min-h-[100dvh] flex flex-col justify-center items-center text-center px-4 z-0">
             <div className="overlay-hero inset-0 pointer-events-none "></div>
 
             <div className="max-w-4xl mx-auto z-10">

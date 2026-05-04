@@ -1,8 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --color-background: #04043d;
+  --color-background: #001025;
   --color-foreground: #f1f7f6;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: 'Poppins', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.625;
+  }
+
+  a {
+    font-weight: 500;
+    color: inherit;
+    text-underline-offset: 4px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 700;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+  }
 }
 
 @layer base {
@@ -24,7 +53,10 @@
 
   h1,
   h2,
-  h3,
+  h3 {
+    font-weight: 700;
+  }
+
   h4,
   h5,
   h6 {
@@ -32,25 +64,3 @@
   }
 }
 
-.intro-text {
-  font-weight: bold;
-  background: linear-gradient(250deg, #63a763, #24bcea);
-  background-size: 200% 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: rotateGradient 5s linear infinite;
-}
-
- @keyframes rotateGradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }

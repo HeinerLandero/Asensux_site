@@ -5,7 +5,7 @@ import TeamSection from "./components/TeamSection/TeamSection";
 
 export default function About() {
   return (
-    <section className="bg-gradient-to-r from-richBlack to-black text-antiFlashWhite py-20 px-6">
+    <section className="bg-gradient-to-r from-richBlack to-darkGreen text-antiFlashWhite py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <AboutIntro />
         <AboutHighlights />

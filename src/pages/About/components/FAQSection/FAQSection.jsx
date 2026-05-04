@@ -32,7 +32,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="bg-richBlack text-antiFlashWhite py-20 px-6">
+    <section className="bg-richBlack text-antiFlashWhite py-32 px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
           Preguntas <span className="text-caribbeanGreen">Frecuentes</span>
@@ -73,7 +73,7 @@ export default function FAQSection() {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="mt-4 text-gray-300 overflow-hidden"
+                    className="mt-4 text-stone/70 overflow-hidden"
                     role="region"
                   >
                     {faq.answer}

@@ -23,7 +23,7 @@ export default function ProjectsSection() {
     return (
         <section
             id="projects"
-            className="relative bg-gradient-to-r from-richBlack to-black py-24 px-6 text-white"
+            className="relative bg-gradient-to-r from-richBlack to-darkGreen py-32 px-6 text-antiFlashWhite"
         >
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5 pointer-events-none" />
 
@@ -41,7 +41,7 @@ export default function ProjectsSection() {
 
                 {/* Descripción */}
                 <motion.p
-                    className="text-center text-gray-300 max-w-2xl mx-auto mb-14"
+                    className="text-center text-stone/70 max-w-2xl mx-auto mb-14"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 0.8 }}
@@ -66,12 +66,12 @@ export default function ProjectsSection() {
                                 alt={project.title}
                                 className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-black/60 flex items-end p-6">
+                            <div className="absolute inset-0 bg-richBlack/60 flex items-end p-6">
                                 <div>
-                                    <h3 className="text-lg font-semibold text-white mb-1">
+                                    <h3 className="text-lg font-semibold text-antiFlashWhite mb-1">
                                         {project.title}
                                     </h3>
-                                    <p className="text-sm text-gray-300">{project.description}</p>
+                                    <p className="text-sm text-stone/80">{project.description}</p>
                                 </div>
                             </div>
                         </motion.div>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function ProductosIntro() {
   return (
-    <section className="relative flex bg-gradient-to-r from-richBlack to-black intro-productos h-screen justify-center items-center">
+    <section className="relative flex bg-gradient-to-r from-richBlack to-darkGreen h-screen justify-center items-center">
       <div className="overlay-hero inset-0 pointer-events-none "></div>
       <motion.div
         className="text-center relative z-10"
@@ -11,9 +11,9 @@ export default function ProductosIntro() {
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
-        <h1 className="text-4xl md:text-8xl font-extrabold mb-6 leading-tight  ">
+        <h1 className="text-4xl md:text-8xl font-bold mb-6 leading-tight">
           Nuestros{" "}
-          <span className="intro-text upp relative inline-block">
+          <span className="text-caribbeanGreen relative inline-block">
             Productos
             <motion.span
               className="absolute left-0 -bottom-1 h-[3px] w-full bg-caribbeanGreen rounded-full"

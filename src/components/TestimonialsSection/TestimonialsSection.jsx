@@ -20,27 +20,32 @@ const testimonials = [
 
 export default function TestimonialsSection() {
     return (
-        <section className="bg-gradient-to-r from-richBlack to-black py-20 px-6 text-antiFlashWhite">
-            <div className="max-w-5xl mx-auto text-center">
-                <motion.h2
-                    className="text-3xl md:text-5xl font-bold tracking-tight mb-12"
+        <section className="bg-gradient-to-r from-richBlack to-darkGreen py-32 px-6 text-antiFlashWhite">
+            <div className="max-w-6xl mx-auto">
+                <motion.div
+                    className="text-center mb-16"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    Lo que dicen nuestros <span className="text-caribbeanGreen">clientes</span>
-                </motion.h2>
+                    <p className="text-caribbeanGreen/70 text-sm font-medium tracking-widest uppercase mb-4">
+                        Testimonios
+                    </p>
+                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+                        Lo que dicen nuestros <span className="text-caribbeanGreen">clientes</span>
+                    </h2>
+                </motion.div>
 
                 {/* Static grid — no carousel, no dots */}
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {testimonials.map((t, i) => (
                         <motion.div
                             key={t.name}
-                            className="bg-darkGreen/60 p-8 rounded-2xl border border-white/5 hover:border-caribbeanGreen/20 transition-colors duration-300 text-left"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: i * 0.12, duration: 0.5 }}
+                            className="bg-darkGreen/40 p-8 rounded-2xl border border-white/5 hover:border-caribbeanGreen/20 transition-colors duration-500 text-left"
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                             viewport={{ once: true }}
                         >
                             <p className="text-antiFlashWhite/80 leading-relaxed mb-6">
