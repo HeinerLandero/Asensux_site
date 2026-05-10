@@ -4,7 +4,7 @@ import { ctaBase } from "@/styles/cta";
 
 export default function CallToAction() {
     return (
-        <section className="bg-gradient-to-r from-richBlack to-darkGreen py-32 px-6 text-antiFlashWhite">
+        <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden">
             <motion.div
                 className="max-w-4xl mx-auto text-center"
                 initial={{ opacity: 0, y: 30 }}

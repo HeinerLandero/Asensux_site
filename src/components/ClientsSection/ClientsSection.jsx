@@ -10,7 +10,7 @@ const clients = [
 
 export default function ClientsSection() {
     return (
-        <section className="bg-gradient-to-r from-richBlack to-darkGreen py-32 px-6 text-antiFlashWhite">
+        <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden">
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">
                     Empresas que <span className="text-caribbeanGreen">confían</span> en nosotros

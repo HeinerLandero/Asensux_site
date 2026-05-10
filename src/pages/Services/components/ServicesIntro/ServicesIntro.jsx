@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function ServicesIntro() {
   return (
-    <section className="flex bg-gradient-to-r from-richBlack to-darkGreen h-screen justify-center items-center">
+    <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite py-32 px-6  justify-center items-center">
       <motion.div
         className="text-center "
         initial={{ opacity: 0, y: 50 }}

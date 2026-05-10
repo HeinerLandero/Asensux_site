@@ -8,6 +8,7 @@ import Productos from "../pages/Productos/Productos";
 import Portafolio from "../pages/Portafolio/Portafolio";
 import Blog from "../pages/Blog/Blog";
 import Contact from "../pages/Contact/Contact";
+import NotFound from "../pages/NotFound/NotFound";
 
 export default function AppRouter() {
   return (
@@ -20,6 +21,7 @@ export default function AppRouter() {
         <Route path="portafolio" element={<Portafolio />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contacto" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

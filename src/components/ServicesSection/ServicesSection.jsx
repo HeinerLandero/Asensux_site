@@ -45,7 +45,7 @@ export default function ServicesSection() {
     return (
         <section
             id="services"
-            className="relative bg-gradient-to-r from-richBlack to-darkGreen py-32 text-antiFlashWhite px-6"
+            className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden text-center"
         >
             {/* Patrón de fondo */}
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none" />
@@ -74,7 +74,7 @@ export default function ServicesSection() {
                     {services.map((s, i) => (
                         <motion.div
                             key={s.title}
-                            className={`group flex items-start gap-5 p-6 rounded-2xl border border-white/5 hover:border-caribbeanGreen/30 bg-darkGreen/20 hover:bg-darkGreen/40 transition-all duration-300 cursor-default ${i === 0 ? 'md:col-span-2' : ''}`}
+                            className={`group flex items-start gap-5 p-6 rounded-2xl bg-darkGreen/10 hover:bg-darkGreen/30 transition-all duration-300 cursor-default ${i === 0 ? 'md:col-span-2' : ''}`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 + i * 0.08, duration: 0.5 }}

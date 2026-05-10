@@ -27,7 +27,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative bg-gradient-to-r from-richBlack to-darkGreen py-32 text-antiFlashWhite px-6 overflow-hidden"
+      className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite py-32 px-6  justify-center items-center"
     >
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.04] pointer-events-none" />
       <div className="absolute w-[550px] h-[550px] bg-caribbeanGreen/15 rounded-full blur-3xl -z-10 -top-40 -right-40" />

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function ProductosIntro() {
   return (
-    <section className="relative flex bg-gradient-to-r from-richBlack to-darkGreen h-screen justify-center items-center">
+    <section className="relative bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite min-h-[100dvh] flex flex-col justify-center items-center text-center px-4 z-0">
       <div className="overlay-hero inset-0 pointer-events-none "></div>
       <motion.div
         className="text-center relative z-10"

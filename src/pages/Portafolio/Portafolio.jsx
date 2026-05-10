@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ctaBase } from "@/styles/cta";
 import kambioLogo from "@/assets/images/kambio-main-logo.svg";
 import mockupImg from "@/assets/images/mockup-desktop-inventory.png";
+import CircuitBackground from "../../components/CircuitBackground/CircuitBackground";
 
 const projects = [
   {
@@ -54,8 +55,8 @@ export default function Portafolio() {
   const others = projects.filter((p) => !p.featured);
 
   return (
-    <section className="bg-gradient-to-r from-richBlack to-darkGreen text-antiFlashWhite py-32 px-6">
-      <div className="max-w-6xl mx-auto">
+    <CircuitBackground>
+      <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite py-32 px-6">
         {/* Header */}
         <motion.div
           className="text-center mb-20"
@@ -64,10 +65,10 @@ export default function Portafolio() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-            Proyectos que{" "}
-            <span className="text-caribbeanGreen">hablan solos</span>
-          </h1>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+              Proyectos que{" "}
+              <span className="text-electricBlue">hablan solos</span>
+            </h1>
           <p className="text-stone text-lg max-w-xl mx-auto">
             Cada proyecto es un problema resuelto. Aquí mostramos el cómo.
           </p>
@@ -212,8 +213,8 @@ export default function Portafolio() {
           >
             Hablemos de tu idea
           </Link>
-        </motion.div>
-      </div>
-    </section>
+          </motion.div>
+     </section>
+    </CircuitBackground>
   );
 }

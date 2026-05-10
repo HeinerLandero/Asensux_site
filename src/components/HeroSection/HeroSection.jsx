@@ -9,17 +9,17 @@ export default function Hero() {
 
             <div className="max-w-4xl mx-auto z-10">
                 <motion.h1
-                    className="text-4xl md:text-7xl font-bold mb-6 leading-tight tracking-tight"
+                    className="display text-4xl md:text-6xl lg:text-7xl mb-6 leading-[1.1]"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.6 }}
                 >
                     Software que{" "}
-                    <span className="text-caribbeanGreen">
+                    <span className="text-electricBlue">
                         funciona
                     </span>
                     . Negocios que{" "}
-                    <span className="text-caribbeanGreen">
+                    <span className="text-electricBlue">
                         crecen
                     </span>
                     .

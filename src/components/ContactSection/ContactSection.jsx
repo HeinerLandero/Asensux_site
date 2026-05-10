@@ -6,7 +6,7 @@ export default function CallToActionSection() {
   return (
     <section
       id="cta"
-      className="relative bg-gradient-to-r from-richBlack to-darkGreen py-32 px-6 text-antiFlashWhite overflow-hidden"
+      className="relative bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden overflow-hidden"
     >
       {/* Patrón de fondo y luz */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.04] pointer-events-none" />

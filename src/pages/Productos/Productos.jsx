@@ -3,15 +3,15 @@ import demoGif from "@/assets/images/demo-asensux.gif";
 import { Link } from "react-router-dom";
 import { ctaBase } from "@/styles/cta";
 import ProductosIntro from './components/ProductosIntro/ProductosIntro';
-import ProductosStickySection from './components/ProductosStickySection/ProductosStickySection';
 import ProductosFeatures from './components/ProductosFeatures/ProductosFeatures';
 import ProductosPricing from './components/ProductosPricing/ProductosPricing';
+import CircuitBackground from "../../components/CircuitBackground/CircuitBackground";
 
 export default function Productos() {
   return (
-    <>
+    <CircuitBackground>
       <ProductosIntro />
-      <section className="bg-gradient-to-r from-richBlack to-darkGreen text-antiFlashWhite py-32 px-6">
+      <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite py-32 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Asensux Inventory Showcase */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -72,14 +72,8 @@ export default function Productos() {
               </p>
             </div>
           </div>
-        </div>
+          </div>
       </section>
-
-      <ProductosStickySection />
-
-      <ProductosFeatures />
-
-      <ProductosPricing />
-    </>
+    </CircuitBackground>
   );
 }

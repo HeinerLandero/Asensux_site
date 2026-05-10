@@ -10,7 +10,7 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} <span className="font-semibold text-caribbeanGreen">Asensux</span>. Todos los derechos reservados.
         </p>
 
-        <ul className="flex space-x-6 text-sm">
+        <ul className="flex flex-wrap justify-center gap-6 text-sm">
           <li>
             <Link
               to="/nosotros"
@@ -34,6 +34,22 @@ export default function Footer() {
             >
               Contacto
             </Link>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="hover:text-caribbeanGreen transition-colors duration-300"
+            >
+              Privacidad
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="hover:text-caribbeanGreen transition-colors duration-300"
+            >
+              Términos
+            </a>
           </li>
         </ul>
 

@@ -20,7 +20,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
     return (
-        <section className="bg-gradient-to-r from-richBlack to-darkGreen py-32 px-6 text-antiFlashWhite">
+        <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     className="text-center mb-16"
@@ -42,7 +42,7 @@ export default function TestimonialsSection() {
                     {testimonials.map((t, i) => (
                         <motion.div
                             key={t.name}
-                            className="bg-darkGreen/40 p-8 rounded-2xl border border-white/5 hover:border-caribbeanGreen/20 transition-colors duration-500 text-left"
+                            className="bg-darkGreen/20 p-8 rounded-2xl hover:bg-darkGreen/40 transition-colors duration-500 text-left"
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}

@@ -8,10 +8,11 @@ import TestimonialsSection from '../../components/TestimonialsSection/Testimonia
 import BenefitsSection from '../../components/BenefitsSection/BenefitsSection';
 import CallToActionSection from '../../components/CallToActionSection/CallToActionSection';
 import WorkProcessSection from '../../components/WorkProcessSection/WorkProcessSection';
+import CircuitBackground from '../../components/CircuitBackground/CircuitBackground';
 
 export default function Home() {
   return (
-    <>
+    <CircuitBackground>
       <HeroSection />
       <AboutSection />
       <TechStackSection />
@@ -22,7 +23,7 @@ export default function Home() {
       <BenefitsSection />
       <CallToActionSection />
       <WorkProcessSection />
-    </>
+    </CircuitBackground>
   );
 }
 

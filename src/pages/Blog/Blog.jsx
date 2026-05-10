@@ -23,7 +23,7 @@ const blogPosts = [
 
 export default function Blog() {
   return (
-    <section className="bg-gradient-to-r from-richBlack to-darkGreen text-antiFlashWhite py-32 px-6">
+    <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden text-center">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"

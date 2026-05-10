@@ -23,7 +23,7 @@ export default function ProjectsSection() {
     return (
         <section
             id="projects"
-            className="relative bg-gradient-to-r from-richBlack to-darkGreen py-32 px-6 text-antiFlashWhite"
+            className="relative bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden"
         >
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5 pointer-events-none" />
 
@@ -50,12 +50,15 @@ export default function ProjectsSection() {
                     Estas son algunas de las soluciones que hemos desarrollado con pasión por la innovación y la excelencia técnica.
                 </motion.p>
 
-                {/* Grid de proyectos */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                {/* Asymmetric grid - different sizes */}
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                     {projects.map((project, i) => (
                         <motion.div
                             key={project.title}
-                            className="relative group rounded-xl overflow-hidden shadow-lg bg-richBlack"
+                            className={`relative group rounded-2xl overflow-hidden bg-richBlack/60 backdrop-blur-sm ${
+                                i === 0 ? 'md:col-span-8 md:row-span-2' : 
+                                i === 1 ? 'md:col-span-4' : 'md:col-span-4'
+                            }`}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.1, duration: 0.7 }}
@@ -64,9 +67,9 @@ export default function ProjectsSection() {
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 min-h-[200px]"
                             />
-                            <div className="absolute inset-0 bg-richBlack/60 flex items-end p-6">
+                            <div className="absolute inset-0 bg-gradient-to-t from-richBlack/90 via-richBlack/40 to-transparent flex items-end p-6">
                                 <div>
                                     <h3 className="text-lg font-semibold text-antiFlashWhite mb-1">
                                         {project.title}

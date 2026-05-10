@@ -5,8 +5,9 @@ import { Outlet } from "react-router-dom";
 export default function Layout() {
     return (
         <>
+            <a href="#main-content" className="skip-link">Saltar al contenido</a>
             <Header />
-            <main>
+            <main id="main-content">
                 <Outlet />
             </main>
             <Footer />

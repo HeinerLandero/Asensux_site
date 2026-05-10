@@ -20,7 +20,7 @@ const benefits = [
 
 export default function BenefitsSection() {
     return (
-        <section className="bg-gradient-to-r from-richBlack to-darkGreen py-32 px-6 text-antiFlashWhite">
+        <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden">
             <div className="max-w-6xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left: Heading + description */}

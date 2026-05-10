@@ -59,7 +59,7 @@ const itemVariantsRight = {
 
 export default function WorkProcessSection() {
   return (
-    <section className="relative bg-gradient-to-b from-richBlack to-darkGreen py-32 px-6 overflow-hidden">
+    <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden">
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none" />
       <div className="absolute w-[600px] h-[600px] bg-caribbeanGreen/5 blur-[140px] rounded-full top-1/3 left-1/4 pointer-events-none" />
 

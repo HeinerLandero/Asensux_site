@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { motion } from "framer-motion";
+import CircuitBackground from "../../components/CircuitBackground/CircuitBackground";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -21,8 +22,9 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-gradient-to-r from-richBlack to-darkGreen text-antiFlashWhite py-32 px-6">
-      <div className="max-w-6xl mx-auto">
+    <CircuitBackground>
+      <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite py-32 px-6">
+        <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 40 }}
@@ -162,5 +164,6 @@ export default function Contact() {
         </div>
       </div>
     </section>
+    </CircuitBackground>
   );
 }
