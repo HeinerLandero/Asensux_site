@@ -87,5 +87,43 @@
   .skip-link:focus {
     top: 0;
   }
+  
+  a.logo-header-link {
+    text-decoration: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+    background: transparent !important;
+  }
+  
+  a.logo-header-link:hover {
+    text-decoration: none !important;
+    opacity: 1 !important;
+    background: transparent !important;
+  }
+  
+  a.logo-header-link:visited {
+    text-decoration: none !important;
+    opacity: 1 !important;
+  }
+  
+  .nav-link-underline {
+    position: relative;
+  }
+  
+  .nav-link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #0074D9;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link-underline:hover::after,
+  .nav-link-underline.active::after {
+    width: 100%;
+  }
 }
 

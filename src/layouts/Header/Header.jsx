@@ -2,45 +2,56 @@ import { useState } from "react";
 import '../../layouts/Header/Header.scss';
 import { Link, NavLink } from "react-router-dom";
 import logoDesktop from "@/assets/logos/main-logo.png";
-import logoMobile from "@/assets/logos/main-logo-mobile.png";
 
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navLinks = [
+  const navLinksLeft = [
     { to: "/", label: "Inicio", end: true },
     { to: "/nosotros", label: "Nosotros" },
     { to: "/servicios", label: "Servicios" },
+  ];
+
+  const navLinksRight = [
     { to: "/productos", label: "Productos" },
     { to: "/portafolio", label: "Portafolio" },
-    { to: "/blog", label: "Blog" },
     { to: "/contacto", label: "Contacto" },
   ];
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-richBlack/90 backdrop-blur-sm text-antiFlashWhite shadow-md transition-colors duration-300">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-electricBlue tracking-wide">
-          <img
-            src={logoDesktop}
-            alt="Logo Asensux"
-            className="w-40 md:w-48 mx-auto drop-shadow-lg"
-          />
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
-          {navLinks.map(({ to, label, end }) => (
+      <div className="container mx-auto px-4 py-3 lg:py-4 flex justify-between items-center relative">
+        {/* Desktop Navigation - Left */}
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
+          {navLinksLeft.map(({ to, label, end }) => (
             <NavLink
               key={to}
               to={to}
               end={end}
-              className={({ isActive }) =>
-                `relative px-3 py-2 text-base font-medium transition duration-300
-                 ${isActive ? 'text-caribbeanGreen' : 'text-antiFlashWhite hover:text-caribbeanGreen'}`
-              }
+              className={({ isActive }) => `nav-link-underline py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap ${isActive ? "text-electricBlue" : "text-antiFlashWhite"}`}
+            >
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+
+        {/* Logo - Center */}
+        <img
+          src={logoDesktop}
+          alt="Logo Asensux"
+          className="w-36 lg:w-44 drop-shadow-lg absolute left-1/2 -translate-x-1/2"
+        />
+
+
+        {/* Desktop Navigation - Right */}
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
+          {navLinksRight.map(({ to, label, end }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={end}
+              className={({ isActive }) => `nav-link-underline py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap ${isActive ? "text-electricBlue" : "text-antiFlashWhite"}`}
             >
               {label}
             </NavLink>
@@ -49,7 +60,7 @@ export default function Header() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-antiFlashWhite focus:outline-none"
+          className="lg:hidden text-antiFlashWhite focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
           aria-expanded={isMenuOpen}
@@ -66,17 +77,17 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden menu-mobile  backdrop-blur-md px-4 pb-6 pt-2 space-y-3 text-center z-40 shadow-md transition-all duration-300"
-
+        <div className="lg:hidden menu-mobile backdrop-blur-md px-4 pb-6 pt-2 space-y-3 text-center z-40 shadow-md transition-all duration-300"
         >
-          {navLinks.map(({ to, label }) => (
+          {[...navLinksLeft, ...navLinksRight].map(({ to, label, end }) => (
             <NavLink
               key={to}
               to={to}
+              end={end}
               onClick={() => setIsMenuOpen(false)}
               className={({ isActive }) =>
                 `block py-2 font-medium text-lg transition duration-300
-                 ${isActive ? 'text-caribbeanGreen' : 'text-antiFlashWhite hover:text-caribbeanGreen'}`
+                 ${isActive ? 'text-electricBlue' : 'text-antiFlashWhite hover:text-electricBlue'}`
               }
             >
               {label}
