@@ -10,32 +10,32 @@ import {
 
 const services = [
     {
-        icon: <Code2 className="w-8 h-8 text-caribbeanGreen" />,
+        icon: <Code2 className="w-6 sm:w-8 h-6 sm:h-8 text-electricBlue" />,
         title: "Desarrollo web",
         desc: "Aplicaciones a medida con React, Node y Laravel. Escalables desde el día uno."
     },
     {
-        icon: <MonitorSmartphone className="w-8 h-8 text-caribbeanGreen" />,
+        icon: <MonitorSmartphone className="w-6 sm:w-8 h-6 sm:h-8 text-electricBlue" />,
         title: "Apps móviles",
         desc: "React Native y Flutter. Una base de código, iOS y Android nativos."
     },
     {
-        icon: <ServerCog className="w-8 h-8 text-caribbeanGreen" />,
+        icon: <ServerCog className="w-6 sm:w-8 h-6 sm:h-8 text-electricBlue" />,
         title: "Backend & APIs",
         desc: "Arquitectura REST y GraphQL. Base de datos, autenticación y despliegue automatizado."
     },
     {
-        icon: <Users2 className="w-8 h-8 text-caribbeanGreen" />,
+        icon: <Users2 className="w-6 sm:w-8 h-6 sm:h-8 text-electricBlue" />,
         title: "Experiencia de usuario",
         desc: "Prototipado, testing con usuarios e interfaces que convierten visitantes en clientes."
     },
     {
-        icon: <ShieldCheck className="w-8 h-8 text-caribbeanGreen" />,
+        icon: <ShieldCheck className="w-6 sm:w-8 h-6 sm:h-8 text-electricBlue" />,
         title: "Seguridad & DevOps",
         desc: "CI/CD, monitoreo 24/7, backups automáticos. Tu producto siempre disponible."
     },
     {
-        icon: <Bot className="w-8 h-8 text-caribbeanGreen" />,
+        icon: <Bot className="w-6 sm:w-8 h-6 sm:h-8 text-electricBlue" />,
         title: "IA & Bots",
         desc: "Chatbots, asistentes inteligentes y automatización de procesos con modelos de lenguaje."
     }
@@ -45,46 +45,42 @@ export default function ServicesSection() {
     return (
         <section
             id="services"
-            className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden text-center"
+            className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-16 sm:py-24 md:py-32 px-4 sm:px-6 overflow-hidden text-center"
         >
-            {/* Patrón de fondo */}
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none" />
-
-            {/* Halo de luz */}
-            <div className="absolute w-[500px] h-[500px] bg-caribbeanGreen/25 blur-3xl rounded-full -top-32 -left-32 -z-10" />
+            <div className="absolute w-[500px] h-[500px] bg-electricBlue/25 blur-3xl rounded-full -top-32 -left-32 -z-10" />
 
             <div className="max-w-5xl mx-auto">
                 <motion.div
-                    className="text-center mb-16"
+                    className="text-center mb-10 sm:mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight">
                         Lo que hacemos
                     </h2>
-                    <p className="mt-4 text-lg text-antiFlashWhite/70 max-w-xl mx-auto">
+                    <p className="mt-3 sm:mt-4 text-base sm:text-lg text-antiFlashWhite/70 max-w-xl mx-auto">
                         De la idea al producto. Cada servicio está pensado para que tu empresa avance sin fricción.
                     </p>
                 </motion.div>
 
-                {/* Asymmetric grid — first item full width, rest in 2 columns */}
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid gap-3 sm:gap-4 md:grid-cols-2">
                     {services.map((s, i) => (
                         <motion.div
                             key={s.title}
-                            className={`group flex items-start gap-5 p-6 rounded-2xl bg-darkGreen/10 hover:bg-darkGreen/30 transition-all duration-300 cursor-default ${i === 0 ? 'md:col-span-2' : ''}`}
+                            className={`group flex items-start gap-4 sm:gap-5 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-navy/30 hover:bg-navy/50 transition-all duration-300 cursor-default ${i === 0 ? 'md:col-span-2' : ''}`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 + i * 0.08, duration: 0.5 }}
                             viewport={{ once: true }}
                         >
-                            <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-caribbeanGreen/10 flex items-center justify-center group-hover:bg-caribbeanGreen/20 group-active:scale-[0.95] transition-all">
+                            <div className="flex-shrink-0 w-10 sm:w-12 h-10 sm:h-12 rounded-lg bg-electricBlue/10 flex items-center justify-center group-hover:bg-electricBlue/20 group-active:scale-[0.95] transition-all">
                                 {s.icon}
                             </div>
                             <div>
-                                <h3 className="text-lg font-semibold text-antiFlashWhite mb-1">{s.title}</h3>
+                                <h3 className="text-base sm:text-lg font-semibold text-antiFlashWhite mb-1">{s.title}</h3>
                                 <p className="text-antiFlashWhite/60 text-sm leading-relaxed">{s.desc}</p>
                             </div>
                         </motion.div>

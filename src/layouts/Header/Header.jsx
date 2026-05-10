@@ -22,19 +22,11 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full z-50 bg-richBlack/90 backdrop-blur-sm text-antiFlashWhite shadow-md transition-colors duration-300">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-caribbeanGreen tracking-wide">
-          {/* Desktop logo */}
+        <Link to="/" className="text-2xl font-bold text-electricBlue tracking-wide">
           <img
             src={logoDesktop}
             alt="Logo Asensux"
-            className="hidden md:block mx-auto w-48 drop-shadow-lg"
-          />
-
-          {/* Mobile logo */}
-          <img
-            src={logoMobile}
-            alt="Logo Asensux Mobile"
-            className="block md:hidden mx-auto w-16 drop-shadow-md"
+            className="w-40 md:w-48 mx-auto drop-shadow-lg"
           />
         </Link>
 

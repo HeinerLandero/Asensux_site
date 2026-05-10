@@ -4,12 +4,12 @@ import { ctaBase } from "@/styles/cta";
 
 export default function Hero() {
     return (
-        <section className="relative bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite min-h-[100dvh] flex flex-col justify-center items-center text-center px-4 z-0">
+        <section className="relative bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite min-h-[85dvh] sm:min-h-[100dvh] flex flex-col justify-center items-center text-center px-4 sm:px-6 z-0 pt-20 sm:pt-0">
             <div className="overlay-hero inset-0 pointer-events-none "></div>
 
             <div className="max-w-4xl mx-auto z-10">
-                <motion.h1
-                    className="display text-4xl md:text-6xl lg:text-7xl mb-6 leading-[1.1]"
+<motion.h1
+                    className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-[1.1]"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.6 }}
@@ -25,7 +25,7 @@ export default function Hero() {
                     .
                 </motion.h1>
                 <motion.p
-                    className="text-base md:text-xl text-antiFlashWhite/80 mb-10 max-w-2xl mx-auto"
+                    className="text-base sm:text-lg md:text-xl text-antiFlashWhite/80 mb-8 sm:mb-10 max-w-xl sm:max-w-2xl mx-auto"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.6 }}
