@@ -4,49 +4,64 @@ import { Link } from "react-router-dom";
 import { ctaBase } from "@/styles/cta";
 import kambioLogo from "@/assets/images/kambio-main-logo.svg";
 import mockupImg from "@/assets/images/mockup-desktop-inventory.png";
+import ritmocaribeImg from "@/assets/images/ritmocaribe.png";
+import anrealstudioImg from "@/assets/images/anrealstudio.png";
+import solucionesImg from "@/assets/images/soluciones-arquitectura.png";
+import estructurasImg from "@/assets/images/estructuras_y_acabados.png";
+import inventoryImg from "@/assets/images/asensuxinventory.png";
 import CircuitBackground from "../../components/CircuitBackground/CircuitBackground";
 
 const projects = [
   {
-    id: "asensux-inventory",
-    title: "Asensux Inventory",
+    id: "inventory-master",
+    title: "Inventory Master",
     category: "Producto propio",
     description: "Sistema de gestión de inventarios con facturación electrónica, alertas de stock, dashboard en tiempo real y soporte multiusuario. Diseñado para pymes colombianas que necesitan control total sin complicaciones.",
-    image: mockupImg,
+    image: inventoryImg,
     tags: ["React", "Laravel", "MySQL", "DIAN"],
     year: "2025",
     featured: true,
-    link: "/productos",
+    link: "https://inventorymaster.asensux.tech",
   },
   {
-    id: "kambio",
-    title: "UpTranslink",
-    category: "Plataforma de transporte",
-    description: "Sistema de gestión de rutas y movilidad urbana para operadores de transporte público. Optimización de itinerarios, seguimiento GPS en tiempo real y panel de control para flotas.",
-    image: kambioLogo,
-    tags: ["React", "Node.js", "PostgreSQL", "Maps API"],
-    year: "2024",
-    link: "#",
-  },
-  {
-    id: "landing-ai",
-    title: "Landing AI SaaS",
-    category: "Marketing digital",
-    description: "Sitio web promocional completo para producto de inteligencia artificial. Diseño editorial con animaciones scroll-driven, formulario de captación de leads y optimización SEO técnica.",
-    image: kambioLogo,
-    tags: ["Next.js", "Tailwind", "Framer Motion", "Vercel"],
+    id: "ritmo-caribeno",
+    title: "Ritmo Caribeño",
+    category: "Sitio web musical",
+    description: "Plataforma web para agrupación musical de música folclórica del Carnaval de Barranquilla. Presentación de eventos, discografía, biografía y contacto.",
+    image: ritmocaribeImg,
+    tags: ["React", "Tailwind", "Animaciones", "Responsive"],
     year: "2025",
-    link: "#",
+    link: "https://lightgrey-quail-267025.hostingersite.com",
   },
   {
-    id: "asensux-manager",
-    title: "Asensux Manager",
-    category: "Herramienta interna",
-    description: "Panel de gestión empresarial para seguimiento de proyectos, asignación de tareas, control de tiempos y comunicación con clientes. Integrado con nuestro pipeline de desarrollo.",
-    image: mockupImg,
-    tags: ["React", "Express", "MongoDB", "WebSocket"],
-    year: "2024",
-    link: "#",
+    id: "anrealstudio",
+    title: "Anrealstudio",
+    category: "Portafolio de arquitectura",
+    description: "Sitio web profesional para estudio de arquitectura. Galerías de proyectos, información de servicios y formulario de contacto.",
+    image: anrealstudioImg,
+    tags: ["React", "Tailwind", "Galería", "Moderno"],
+    year: "2025",
+    link: "https://lightslategrey-caterpillar-688694.hostingersite.com",
+  },
+  {
+    id: "soluciones-arquitectonicas",
+    title: "Soluciones Arquitectónicas",
+    category: "Constructora",
+    description: "Sitio web para empresa de estructuras y acabados arquitectónicos. Portafolio de proyectos, servicios y sección de contacto.",
+    image: solucionesImg,
+    tags: ["React", "Tailwind", "Portfolio", "Diseño"],
+    year: "2025",
+    link: "https://soluciones-arquitectonicas.netlify.app/#contacto",
+  },
+  {
+    id: "estructuras-y-acabados",
+    title: "Estructuras y Acabados",
+    category: "Constructora",
+    description: "Sitio web para empresa de construcción especializada en estructuras y acabados. Presentación de proyectos, servicios y información de contacto.",
+    image: estructurasImg,
+    tags: ["React", "Tailwind", "Construcción", "Portfolio"],
+    year: "2025",
+    link: "https://estructuras-y-acabados.netlify.app",
   },
 ];
 
