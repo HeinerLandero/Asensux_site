@@ -10,10 +10,10 @@ const clients = [
 
 export default function ClientsSection() {
     return (
-        <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden">
+        <section className="   from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden">
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                    Empresas que <span className="text-caribbeanGreen">confían</span> en nosotros
+                    Empresas que <span className="text-electricBlue">confían</span> en nosotros
                 </h2>
                 <p className="text-stone mb-12">
                     Más de 20 empresas han confiado en Asensux para potenciar sus productos digitales.
@@ -26,6 +26,8 @@ export default function ClientsSection() {
                                 src={client.logo}
                                 alt={`Logo de ${client.name}`}
                                 className="max-h-full object-contain"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </div>
                     ))}

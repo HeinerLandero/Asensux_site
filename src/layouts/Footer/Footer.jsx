@@ -4,17 +4,17 @@ import "./Footer.scss";
 
 export default function Footer() {
   return (
-    <footer className="bg-darkGreen text-antiFlashWhite py-10 border-t border-richBlack">
+    <footer className="bg-bgDeep text-antiFlashWhite py-10 border-t border-white/5">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-sm text-center md:text-left">
-          &copy; {new Date().getFullYear()} <span className="font-semibold text-caribbeanGreen">Asensux</span>. Todos los derechos reservados.
+          &copy; {new Date().getFullYear()} <span className="font-semibold text-electricBlue">Asensux</span>. Todos los derechos reservados.
         </p>
 
         <ul className="flex flex-wrap justify-center gap-6 text-sm">
           <li>
             <Link
               to="/nosotros"
-              className="hover:text-caribbeanGreen transition-colors duration-300"
+              className="hover:text-electricBlue transition-colors duration-300"
             >
               Nosotros
             </Link>
@@ -22,7 +22,7 @@ export default function Footer() {
           <li>
             <Link
               to="/servicios"
-              className="hover:text-caribbeanGreen transition-colors duration-300"
+              className="hover:text-electricBlue transition-colors duration-300"
             >
               Servicios
             </Link>
@@ -30,7 +30,7 @@ export default function Footer() {
           <li>
             <Link
               to="/contacto"
-              className="hover:text-caribbeanGreen transition-colors duration-300"
+              className="hover:text-electricBlue transition-colors duration-300"
             >
               Contacto
             </Link>
@@ -38,7 +38,7 @@ export default function Footer() {
           <li>
             <a
               href="#"
-              className="hover:text-caribbeanGreen transition-colors duration-300"
+              className="hover:text-electricBlue transition-colors duration-300"
             >
               Privacidad
             </a>
@@ -46,7 +46,7 @@ export default function Footer() {
           <li>
             <a
               href="#"
-              className="hover:text-caribbeanGreen transition-colors duration-300"
+              className="hover:text-electricBlue transition-colors duration-300"
             >
               Términos
             </a>
@@ -58,7 +58,7 @@ export default function Footer() {
             href="https://www.facebook.com/asensux"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-caribbeanGreen transition-colors duration-300"
+            className="hover:text-electricBlue transition-colors duration-300"
             aria-label="Facebook"
           >
             <FaFacebookF />
@@ -67,7 +67,7 @@ export default function Footer() {
             href="https://www.instagram.com/asensux"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-caribbeanGreen transition-colors duration-300"
+            className="hover:text-electricBlue transition-colors duration-300"
             aria-label="Instagram"
           >
             <FaInstagram />
@@ -76,7 +76,7 @@ export default function Footer() {
             href="https://www.linkedin.com/company/asensux"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-caribbeanGreen transition-colors duration-300"
+            className="hover:text-electricBlue transition-colors duration-300"
             aria-label="LinkedIn"
           >
             <FaLinkedin />

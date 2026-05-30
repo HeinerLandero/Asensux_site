@@ -6,10 +6,10 @@ export default function ServiceCard({ title, icon: Icon, text }) {
     <motion.div
       whileHover={{ y: -4 }}
       transition={{ type: "spring", stiffness: 300 }}
-      className="group relative bg-gradient-to-b from-darkGreen/50 to-richBlack p-8 rounded-2xl border border-white/10 hover:border-caribbeanGreen/30 transition-colors"
+      className="group relative bg-gradient-to-b from-navy/50 to-navyDark p-8 rounded-2xl border border-white/10 hover:border-electricBlue/30 transition-colors"
     >
       <div className="mb-6">
-        <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-caribbeanGreen/10 text-caribbeanGreen group-hover:bg-caribbeanGreen/20 transition-colors">
+        <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-electricBlue/10 text-electricBlue group-hover:bg-electricBlue/20 transition-colors">
           <Icon className="w-6 h-6" strokeWidth={1.5} />
         </div>
       </div>

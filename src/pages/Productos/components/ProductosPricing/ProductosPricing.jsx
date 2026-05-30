@@ -65,10 +65,10 @@ const plans = [
 
 export default function ProductosPricing() {
   return (
-    <section className="bg-gradient-to-r from-richBlack to-darkGreen text-antiFlashWhite py-32 px-6">
+    <section className="   from-navyDark to-navy text-antiFlashWhite py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center mb-4">
-          Planes y <span className="text-caribbeanGreen">Precios</span>
+          Planes y <span className="text-electricBlue">Precios</span>
         </h2>
         <p className="text-stone text-center mb-16 max-w-lg mx-auto">
           Empieza gratis. Escala cuando lo necesites. Sin compromisos.
@@ -78,15 +78,15 @@ export default function ProductosPricing() {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative flex flex-col bg-darkGreen/40 p-8 rounded-2xl transition-all duration-300 border ${
+              className={`relative flex flex-col  /40 p-8 rounded-2xl transition-all duration-300 border ${
                 plan.popular
-                  ? 'border-caribbeanGreen bg-caribbeanGreen/5'
+                  ? 'border-electricBlue bg-electricBlue/5'
                   : 'border-white/5 hover:border-white/10'
               }`}
             >
               {plan.popular && (
                 <div className="mb-4">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-caribbeanGreen bg-caribbeanGreen/10 px-3 py-1 rounded">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-electricBlue bg-electricBlue/10 px-3 py-1 rounded">
                     Recomendado
                   </span>
                 </div>
@@ -95,7 +95,7 @@ export default function ProductosPricing() {
               <div className="mb-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{plan.name}</h3>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-caribbeanGreen">{plan.price}</span>
+                  <span className="text-3xl font-bold text-electricBlue">{plan.price}</span>
                     {plan.pricePeriod && <span className="text-stone text-sm">{plan.pricePeriod}</span>}
                 </div>
                 <p className="text-stone text-sm mt-2">{plan.description}</p>
@@ -104,7 +104,7 @@ export default function ProductosPricing() {
               <ul className="space-y-3 mb-8 flex-grow">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-caribbeanGreen mt-0.5 flex-shrink-0" />
+                    <Check className="w-4 h-4 text-electricBlue mt-0.5 flex-shrink-0" />
                     <span className="text-antiFlashWhite/70 text-sm">{feature}</span>
                   </li>
                 ))}

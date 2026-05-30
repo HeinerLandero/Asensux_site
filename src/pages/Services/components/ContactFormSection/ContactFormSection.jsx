@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 import { motion } from "framer-motion";
+import { ease, once } from "../../../../lib/animations";
 
 export default function ContactFormSection() {
   const [form, setForm] = useState({
@@ -21,14 +22,14 @@ export default function ContactFormSection() {
   };
 
   return (
-    <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite py-32 px-6">
+    <section className="   from-navyDark to-navy text-antiFlashWhite py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } } }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={once}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             ¿Listo para <span className="text-electricBlue">empezar?</span>
@@ -39,10 +40,10 @@ export default function ContactFormSection() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+          variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.2, ease } } }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={once}
         >
           <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-6">
             <div>
@@ -57,7 +58,7 @@ export default function ContactFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="Tu nombre"
-                className="w-full px-4 py-3 rounded-lg bg-navy/50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-electricBlue focus:border-transparent transition outline-none placeholder:text-stone"
+                className="w-full px-4 py-3 rounded-lg  /50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-electricBlue focus:border-transparent transition outline-none placeholder:text-stone"
               />
             </div>
 
@@ -73,7 +74,7 @@ export default function ContactFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="tu@correo.com"
-                className="w-full px-4 py-3 rounded-lg bg-navy/50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-electricBlue focus:border-transparent transition outline-none placeholder:text-stone"
+                className="w-full px-4 py-3 rounded-lg  /50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-electricBlue focus:border-transparent transition outline-none placeholder:text-stone"
               />
             </div>
 
@@ -89,7 +90,7 @@ export default function ContactFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="¿En qué podemos ayudarte?"
-                className="w-full px-4 py-3 rounded-lg bg-navy/50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-electricBlue focus:border-transparent transition outline-none placeholder:text-stone"
+                className="w-full px-4 py-3 rounded-lg  /50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-electricBlue focus:border-transparent transition outline-none placeholder:text-stone"
               />
             </div>
 
@@ -105,7 +106,7 @@ export default function ContactFormSection() {
                 rows="5"
                 required
                 placeholder="Cuéntanos sobre tu proyecto..."
-                className="w-full px-4 py-3 rounded-lg bg-navy/50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-electricBlue focus:border-transparent transition outline-none placeholder:text-stone resize-none"
+                className="w-full px-4 py-3 rounded-lg  /50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-electricBlue focus:border-transparent transition outline-none placeholder:text-stone resize-none"
               ></textarea>
             </div>
 

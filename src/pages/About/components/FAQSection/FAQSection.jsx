@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ease } from "../../../../lib/animations";
 
 const faqs = [
   {
@@ -32,10 +33,10 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="bg-richBlack text-antiFlashWhite py-32 px-6">
+    <section className=" Dark text-antiFlashWhite py-32 px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
-          Preguntas <span className="text-caribbeanGreen">Frecuentes</span>
+          Preguntas <span className="text-electricBlue">Frecuentes</span>
         </h2>
 
         <div className="space-y-4">
@@ -46,7 +47,7 @@ export default function FAQSection() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="border border-darkGreen rounded-xl p-4 bg-darkGreen/40"
+              className="border border-navy rounded-xl p-4  /40"
             >
               <button
                 onClick={() => toggle(index)}
@@ -58,7 +59,7 @@ export default function FAQSection() {
                 <motion.span
                   initial={false}
                   animate={{ rotate: activeIndex === index ? 45 : 0 }}
-                  className="text-caribbeanGreen text-2xl transition-transform duration-300"
+                  className="text-electricBlue text-2xl transition-transform duration-300"
                 >
                   +
                 </motion.span>
@@ -72,7 +73,7 @@ export default function FAQSection() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3, ease }}
                     className="mt-4 text-stone/70 overflow-hidden"
                     role="region"
                   >

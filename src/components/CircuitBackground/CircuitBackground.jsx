@@ -8,8 +8,8 @@ export default function CircuitBackground({ children, className = "" }) {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.03, 0.1, 0.1, 0.03]);
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      <div className="fixed inset-0 pointer-events-none z-0">
+    <div className={`relative ${className}`}>
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div 
           className="absolute inset-0 opacity-[0.05]"
           style={{

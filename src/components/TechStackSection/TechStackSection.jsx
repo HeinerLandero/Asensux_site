@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { SiTailwindcss, SiMysql, SiFirebase, SiVite } from "react-icons/si";
 import { motion } from "framer-motion";
+import { ease, once } from "../../lib/animations";
 
 export default function TechStackSection() {
     const stack = [
@@ -26,7 +27,7 @@ export default function TechStackSection() {
     ];
 
     return (
-        <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden text-center">
+        <section className="   from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden text-center">
             <motion.div
                 className="max-w-6xl mx-auto"
                 initial="hidden"
@@ -38,17 +39,17 @@ export default function TechStackSection() {
                     className="text-3xl md:text-5xl font-bold mb-6"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.6, ease }}
                 >
                     Tecnologías que{" "}
-                    <span className="text-caribbeanGreen">usamos</span>
+                    <span className="text-electricBlue">usamos</span>
                 </motion.h2>
 
                 <motion.p
                     className="text-stone mb-16 max-w-xl mx-auto"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.6 }}
+                    transition={{ delay: 0.2, duration: 0.6, ease }}
                 >
                     Trabajamos con herramientas modernas y confiables para garantizar
                     calidad, escalabilidad y eficiencia.
@@ -60,26 +61,22 @@ export default function TechStackSection() {
                     whileInView="visible"
                     variants={{
                         hidden: {},
-                        visible: {
-                            transition: {
-                                staggerChildren: 0.06,
-                            },
-                        },
+                        visible: { transition: { staggerChildren: 0.04 } },
                     }}
-                    viewport={{ once: true }}
+                    viewport={once}
                 >
                     {stack.map((tech, index) => (
                         <motion.div
                             key={index}
                             className="flex flex-col items-center gap-3 cursor-default group"
-                            variants={{
-                                hidden: { opacity: 0, y: 20 },
-                                visible: { opacity: 1, y: 0 },
-                            }}
-                            transition={{ duration: 0.4, ease: "easeOut" }}
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: { opacity: 1, y: 0 },
+                                }}
+                                transition={{ duration: 0.4, ease }}
                         >
-                            <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-darkGreen/40 border border-white/5 group-hover:border-caribbeanGreen/20 group-hover:bg-caribbeanGreen/10 transition-all duration-500">
-                                <div className="text-2xl text-caribbeanGreen/60 group-hover:text-caribbeanGreen transition-colors duration-500">{tech.icon}</div>
+                            <div className="w-14 h-14 flex items-center justify-center rounded-xl  /40 border border-white/5 group-hover:border-electricBlue/20 group-hover:bg-electricBlue/10 transition-all duration-500">
+                                <div className="text-2xl text-electricBlue/60 group-hover:text-electricBlue transition-colors duration-500">{tech.icon}</div>
                             </div>
                             <span className="text-xs text-stone/50 group-hover:text-stone/80 transition-colors duration-500">{tech.name}</span>
                         </motion.div>

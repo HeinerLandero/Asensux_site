@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { History, Target, Users } from "lucide-react";
+import { easeAlt } from "../../../../lib/animations";
 
 const highlights = [
   {
@@ -25,17 +26,17 @@ export default function AboutHighlights() {
       {highlights.map((item, idx) => (
         <motion.div
           key={item.title}
-          className="group flex items-start gap-5 p-8 rounded-2xl border border-white/5 hover:border-caribbeanGreen/20 bg-darkGreen/20 hover:bg-darkGreen/40 transition-all duration-500"
+          className="group flex items-start gap-5 p-8 rounded-2xl border border-white/5 hover:border-electricBlue/20  /20 hover: /40 transition-all duration-500"
           initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ delay: idx * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+           transition={{ delay: idx * 0.1, duration: 0.6, ease: easeAlt }}
           viewport={{ once: true }}
         >
-          <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-caribbeanGreen/10 flex items-center justify-center group-hover:bg-caribbeanGreen/20 transition-all">
-            <item.icon className="w-6 h-6 text-caribbeanGreen" strokeWidth={1.5} />
+          <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-electricBlue/10 flex items-center justify-center group-hover:bg-electricBlue/20 transition-all">
+            <item.icon className="w-6 h-6 text-electricBlue" strokeWidth={1.5} />
           </div>
           <div>
-            <h3 className="text-xl font-semibold text-antiFlashWhite mb-2 group-hover:text-caribbeanGreen transition-colors duration-500">{item.title}</h3>
+            <h3 className="text-xl font-semibold text-antiFlashWhite mb-2 group-hover:text-electricBlue transition-colors duration-500">{item.title}</h3>
             <p className="text-stone/60 leading-relaxed group-hover:text-stone/80 transition-colors duration-500">{item.text}</p>
           </div>
         </motion.div>

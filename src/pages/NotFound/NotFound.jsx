@@ -4,7 +4,7 @@ import { Home, ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-[100dvh] flex flex-col items-center justify-center px-6 text-center bg-gradient-to-b from-richBlack to-darkGreen relative overflow-hidden">
+    <div className="min-h-[100dvh] flex flex-col items-center justify-center px-6 text-center bg-gradient-to-b from-navyDark to-navy relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none" />
       
       <motion.div
@@ -13,7 +13,7 @@ export default function NotFound() {
         transition={{ duration: 0.6 }}
         className="relative z-10"
       >
-        <h1 className="text-[120px] md:text-[180px] font-bold text-caribbeanGreen/20 leading-none">
+        <h1 className="text-[120px] md:text-[180px] font-bold text-electricBlue/20 leading-none">
           404
         </h1>
         <h2 className="text-2xl md:text-3xl font-bold text-antiFlashWhite mb-4 -mt-8">
@@ -33,7 +33,7 @@ export default function NotFound() {
           </Link>
           <button
             onClick={() => window.history.back()}
-            className="inline-flex items-center gap-2 border border-white/20 hover:border-caribbeanGreen/50 text-antiFlashWhite px-6 py-3 rounded-xl transition-all"
+            className="inline-flex items-center gap-2 border border-white/20 hover:border-electricBlue/50 text-antiFlashWhite px-6 py-3 rounded-xl transition-all"
           >
             <ArrowLeft className="w-5 h-5" />
             Volver atrás

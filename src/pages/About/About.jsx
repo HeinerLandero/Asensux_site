@@ -7,7 +7,7 @@ import CircuitBackground from "../../components/CircuitBackground/CircuitBackgro
 export default function About() {
   return (
     <CircuitBackground>
-      <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite py-32 px-6">
+      <section className="   from-navyDark to-navy text-antiFlashWhite py-32 px-6">
         <div className="max-w-6xl mx-auto">
           <AboutIntro />
           <AboutHighlights />

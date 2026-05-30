@@ -23,7 +23,7 @@ export default function Contact() {
 
   return (
     <CircuitBackground>
-      <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite py-32 px-6">
+      <section className="   from-navyDark to-navy text-antiFlashWhite py-32 px-6">
         <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -50,8 +50,8 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <div className="flex items-start gap-4">
-              <div className="bg-caribbeanGreen/10 p-3 rounded-lg">
-                <Mail className="w-6 h-6 text-caribbeanGreen" />
+              <div className="bg-electricBlue/10 p-3 rounded-lg">
+                <Mail className="w-6 h-6 text-electricBlue" />
               </div>
               <div>
                 <h3 className="font-semibold text-lg mb-1">Email</h3>
@@ -60,8 +60,8 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="bg-caribbeanGreen/10 p-3 rounded-lg">
-                <Phone className="w-6 h-6 text-caribbeanGreen" />
+              <div className="bg-electricBlue/10 p-3 rounded-lg">
+                <Phone className="w-6 h-6 text-electricBlue" />
               </div>
               <div>
                 <h3 className="font-semibold text-lg mb-1">Teléfono</h3>
@@ -70,8 +70,8 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="bg-caribbeanGreen/10 p-3 rounded-lg">
-                <MapPin className="w-6 h-6 text-caribbeanGreen" />
+              <div className="bg-electricBlue/10 p-3 rounded-lg">
+                <MapPin className="w-6 h-6 text-electricBlue" />
               </div>
               <div>
                 <h3 className="font-semibold text-lg mb-1">Ubicación</h3>
@@ -100,7 +100,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Tu nombre"
-                  className="w-full px-4 py-3 rounded-lg bg-darkGreen/50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-caribbeanGreen focus:border-transparent transition outline-none placeholder:text-stone"
+                  className="w-full px-4 py-3 rounded-lg  /50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-electricBlue focus:border-transparent transition outline-none placeholder:text-stone"
                 />
               </div>
 
@@ -116,7 +116,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="tu@correo.com"
-                  className="w-full px-4 py-3 rounded-lg bg-darkGreen/50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-caribbeanGreen focus:border-transparent transition outline-none placeholder:text-stone"
+                  className="w-full px-4 py-3 rounded-lg  /50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-electricBlue focus:border-transparent transition outline-none placeholder:text-stone"
                 />
               </div>
 
@@ -132,7 +132,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="¿En qué podemos ayudarte?"
-                  className="w-full px-4 py-3 rounded-lg bg-darkGreen/50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-caribbeanGreen focus:border-transparent transition outline-none placeholder:text-stone"
+                  className="w-full px-4 py-3 rounded-lg  /50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-electricBlue focus:border-transparent transition outline-none placeholder:text-stone"
                 />
               </div>
 
@@ -148,13 +148,13 @@ export default function Contact() {
                   rows="5"
                   required
                   placeholder="Cuéntanos sobre tu proyecto..."
-                  className="w-full px-4 py-3 rounded-lg bg-darkGreen/50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-caribbeanGreen focus:border-transparent transition outline-none placeholder:text-stone resize-none"
+                  className="w-full px-4 py-3 rounded-lg  /50 text-antiFlashWhite border border-white/10 focus:ring-2 focus:ring-electricBlue focus:border-transparent transition outline-none placeholder:text-stone resize-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-caribbeanGreen hover:bg-caribbeanGreen/80 text-richBlack font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-md flex items-center justify-center gap-2"
+                className="w-full bg-electricBlue hover:bg-electricBlue/80 text-navyDark font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-md flex items-center justify-center gap-2"
               >
                 Enviar mensaje
                 <Send className="w-4 h-4" />

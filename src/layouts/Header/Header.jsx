@@ -20,7 +20,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-richBlack/90 backdrop-blur-sm text-antiFlashWhite shadow-md transition-colors duration-300">
+    <header className="fixed top-0 left-0 w-full z-50 glass text-antiFlashWhite transition-colors duration-300">
       <div className="container mx-auto px-4 py-3 lg:py-4 flex justify-between items-center relative">
         {/* Desktop Navigation - Left */}
         <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
@@ -41,6 +41,7 @@ export default function Header() {
           src={logoDesktop}
           alt="Logo Asensux"
           className="w-36 lg:w-44 drop-shadow-lg absolute left-1/2 -translate-x-1/2"
+          decoding="async"
         />
 
 
@@ -77,7 +78,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="lg:hidden menu-mobile backdrop-blur-md px-4 pb-6 pt-2 space-y-3 text-center z-40 shadow-md transition-all duration-300"
+        <div className="lg:hidden glass px-4 pb-6 pt-2 space-y-3 text-center z-40 transition-all duration-300"
         >
           {[...navLinksLeft, ...navLinksRight].map(({ to, label, end }) => (
             <NavLink

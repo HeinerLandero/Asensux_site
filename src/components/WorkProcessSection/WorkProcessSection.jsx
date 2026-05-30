@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Search, FileText, Code, Rocket, ShieldCheck } from "lucide-react";
+import { easeAlt, once } from "../../lib/animations";
 
 const steps = [
   {
@@ -41,37 +42,29 @@ const steps = [
 
 const itemVariants = {
   hidden: { opacity: 0, x: -40 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-  },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: easeAlt } },
 };
 
 const itemVariantsRight = {
   hidden: { opacity: 0, x: 40 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-  },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: easeAlt } },
 };
 
 export default function WorkProcessSection() {
   return (
-    <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden">
+    <section className="   from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden">
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none" />
-      <div className="absolute w-[600px] h-[600px] bg-caribbeanGreen/5 blur-[140px] rounded-full top-1/3 left-1/4 pointer-events-none" />
+      <div className="absolute w-[600px] h-[600px] bg-electricBlue/5 blur-[140px] rounded-full top-1/3 left-1/4 pointer-events-none" />
 
       <div className="max-w-5xl mx-auto relative">
         {/* Header */}
         <div className="text-center mb-20">
           <motion.p
-            className="text-caribbeanGreen/70 text-sm font-medium tracking-widest uppercase mb-4"
+            className="text-electricBlue/70 text-sm font-medium tracking-widest uppercase mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: easeAlt }}
+            viewport={once}
           >
             Cómo trabajamos
           </motion.p>
@@ -80,19 +73,19 @@ export default function WorkProcessSection() {
             className="text-3xl md:text-5xl font-bold text-antiFlashWhite mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1, ease: easeAlt }}
+            viewport={once}
           >
             Nuestro{" "}
-            <span className="text-caribbeanGreen">proceso de trabajo</span>
+            <span className="text-electricBlue">proceso de trabajo</span>
           </motion.h2>
 
           <motion.p
             className="text-stone/70 text-lg max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2, ease: easeAlt }}
+            viewport={once}
           >
             Nos adaptamos a tus necesidades, pero seguimos una estructura clara
             para garantizar resultados.
@@ -105,7 +98,7 @@ export default function WorkProcessSection() {
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent md:-translate-x-px" />
 
           {/* Animated glow line */}
-          <div className="absolute left-4 md:left-1/2 top-0 h-24 w-px bg-gradient-to-b from-caribbeanGreen/40 to-transparent blur-[2px] pointer-events-none" />
+          <div className="absolute left-4 md:left-1/2 top-0 h-24 w-px bg-gradient-to-b from-electricBlue/40 to-transparent blur-[2px] pointer-events-none" />
 
           <div className="space-y-12 md:space-y-24">
             {steps.map((step, i) => {
@@ -130,7 +123,7 @@ export default function WorkProcessSection() {
                     }`}
                   >
                     <div
-                      className={`group inline-block bg-darkGreen/30 border border-white/5 hover:border-caribbeanGreen/20 p-6 md:p-8 rounded-2xl transition-all duration-500 hover:bg-darkGreen/50 ${
+                      className={`group inline-block  /30 border border-white/5 hover:border-electricBlue/20 p-6 md:p-8 rounded-2xl transition-all duration-500 hover: /50 ${
                         isEven ? "md:w-full" : "md:w-full"
                       }`}
                     >
@@ -139,10 +132,10 @@ export default function WorkProcessSection() {
                           isEven ? "md:justify-end" : "md:justify-start"
                         }`}
                       >
-                        <span className="text-xs font-mono text-caribbeanGreen/50 tracking-wider">
+                        <span className="text-xs font-mono text-electricBlue/50 tracking-wider">
                           {step.step}
                         </span>
-                        <h3 className="text-xl font-semibold text-antiFlashWhite group-hover:text-caribbeanGreen transition-colors duration-500">
+                        <h3 className="text-xl font-semibold text-antiFlashWhite group-hover:text-electricBlue transition-colors duration-500">
                           {step.title}
                         </h3>
                       </div>
@@ -154,9 +147,9 @@ export default function WorkProcessSection() {
 
                   {/* Center dot + icon */}
                   <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center z-10">
-                    <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-richBlack border-2 border-caribbeanGreen/30 group-hover:border-caribbeanGreen shadow-[0_0_20px_rgba(0,223,129,0.15)] transition-all duration-500">
+                    <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full  Dark border-2 border-electricBlue/30 group-hover:border-electricBlue shadow-[0_0_20px_rgba(0,223,129,0.15)] transition-all duration-500">
                       <step.icon
-                        className="w-4 h-4 md:w-5 md:h-5 text-caribbeanGreen"
+                        className="w-4 h-4 md:w-5 md:h-5 text-electricBlue"
                         strokeWidth={1.5}
                       />
                     </div>

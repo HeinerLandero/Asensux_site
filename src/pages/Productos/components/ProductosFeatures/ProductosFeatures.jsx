@@ -30,10 +30,10 @@ const features = [
 
 export default function ProductosFeatures() {
   return (
-    <section className="bg-gradient-to-r from-richBlack to-darkGreen text-antiFlashWhite py-32 px-6">
+    <section className="   from-navyDark to-navy text-antiFlashWhite py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
-          Características <span className="text-caribbeanGreen">destacadas</span>
+          Características <span className="text-electricBlue">destacadas</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -42,12 +42,12 @@ export default function ProductosFeatures() {
             return (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-darkGreen/80 to-darkGreen/40 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-caribbeanGreen/20 transition-all duration-500 hover:-translate-y-2 border border-darkGreen/50 hover:border-caribbeanGreen/30"
+                className="group relative bg-gradient-to-br from-navy/80 to-navy/40 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-electricBlue/20 transition-all duration-500 hover:-translate-y-2 border border-navy/50 hover:border-electricBlue/30"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-caribbeanGreen/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-electricBlue/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10">
-                  <div className="flex items-center justify-center w-16 h-16 bg-caribbeanGreen/10 rounded-xl mb-6 group-hover:bg-caribbeanGreen/20 transition-colors duration-300">
-                    <IconComponent className="w-8 h-8 text-caribbeanGreen" />
+                  <div className="flex items-center justify-center w-16 h-16 bg-electricBlue/10 rounded-xl mb-6 group-hover:bg-electricBlue/20 transition-colors duration-300">
+                    <IconComponent className="w-8 h-8 text-electricBlue" />
                   </div>
                     <h3 className="text-xl font-semibold text-antiFlashWhite mb-4 leading-tight">{feature.title}</h3>
                     <p className="text-stone/70 leading-relaxed">{feature.description}</p>

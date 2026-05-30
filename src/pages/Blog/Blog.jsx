@@ -23,7 +23,7 @@ const blogPosts = [
 
 export default function Blog() {
   return (
-    <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden text-center">
+    <section className="   from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden text-center">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -33,7 +33,7 @@ export default function Blog() {
           viewport={{ once: true }}
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Blog de <span className="text-caribbeanGreen">Asensux</span>
+            Blog de <span className="text-electricBlue">Asensux</span>
           </h1>
           <p className="text-stone text-lg max-w-2xl mx-auto">
             Artículos, novedades y consejos de nuestro equipo sobre tecnología, desarrollo y negocios.
@@ -44,13 +44,13 @@ export default function Blog() {
           {blogPosts.map((post, index) => (
             <motion.article
               key={index}
-              className="bg-darkGreen/50 rounded-xl border border-white/10 p-6 hover:border-caribbeanGreen/50 transition-colors duration-300"
+              className=" /50 rounded-xl border border-white/10 p-6 hover:border-electricBlue/50 transition-colors duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <span className="text-xs text-caribbeanGreen font-medium">{post.category}</span>
+              <span className="text-xs text-electricBlue font-medium">{post.category}</span>
               <h2 className="text-xl font-bold mt-2 mb-3">{post.title}</h2>
               <p className="text-stone text-sm mb-4">{post.excerpt}</p>
               <time className="text-xs text-stone">{post.date}</time>

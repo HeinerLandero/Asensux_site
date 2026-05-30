@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle, Clock, Shield, Zap } from "lucide-react";
+import { ease, once } from "../../../../lib/animations";
 
 const features = [
   {
@@ -26,17 +27,17 @@ const features = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="bg-richBlack text-antiFlashWhite py-32 px-6">
+    <section className=" Dark text-antiFlashWhite py-32 px-6">
       <motion.div
         className="max-w-6xl mx-auto"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
+        variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } } }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={once}
       >
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            ¿Por qué <span className="text-caribbeanGreen">elegirnos</span>?
+            ¿Por qué <span className="text-electricBlue">elegirnos</span>?
           </h2>
           <p className="text-stone/70 max-w-lg mx-auto">
             Nos destacamos por nuestro compromiso, innovación y acompañamiento constante.
@@ -47,17 +48,17 @@ export default function WhyChooseUsSection() {
           {features.map((feature, idx) => (
             <motion.div
               key={idx}
-              className="group flex items-start gap-5 p-8 rounded-2xl border border-white/5 hover:border-caribbeanGreen/20 bg-darkGreen/20 hover:bg-darkGreen/40 transition-all duration-500"
+              className="group flex items-start gap-5 p-8 rounded-2xl border border-white/5 hover:border-electricBlue/20  /20 hover: /40 transition-all duration-500"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1, ease }}
+              viewport={once}
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-caribbeanGreen/10 flex items-center justify-center group-hover:bg-caribbeanGreen/20 transition-all">
-                <feature.icon className="w-6 h-6 text-caribbeanGreen" strokeWidth={1.5} />
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-electricBlue/10 flex items-center justify-center group-hover:bg-electricBlue/20 transition-all">
+                <feature.icon className="w-6 h-6 text-electricBlue" strokeWidth={1.5} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-antiFlashWhite mb-2 group-hover:text-caribbeanGreen transition-colors duration-500">{feature.title}</h3>
+                <h3 className="text-lg font-semibold text-antiFlashWhite mb-2 group-hover:text-electricBlue transition-colors duration-500">{feature.title}</h3>
                 <p className="text-stone/60 text-sm leading-relaxed group-hover:text-stone/80 transition-colors duration-500">{feature.text}</p>
               </div>
             </motion.div>

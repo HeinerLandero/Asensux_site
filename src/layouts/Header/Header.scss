@@ -1,45 +1,10 @@
 header {
     a {
         background: transparent;
-        transition: 0.5s ease;
+        transition: color 0.3s ease;
 
         &:hover {
-            color: #00df81;
-            transition-delay: 0.5s;
-
-            &::before {
-                width: 100%;
-            }
-
-            &::after {
-                height: 100%;
-                transition-delay: 0.4s;
-                color: aliceblue;
-            }
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 0;
-            width: 100%;
-            background: linear-gradient(250deg, #63a763, #24bcea);
-            transition: 0.4s ease;
-            z-index: -1;
-
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 2px;
-            width: 0;
-            background: linear-gradient(250deg, #63a763, #24bcea);
-            transition: 0.5s ease;
+            color: #0074D9;
         }
     }
 }

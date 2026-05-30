@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { easeAlt, once } from "../../lib/animations";
 
 const testimonials = [
     {
@@ -20,20 +21,20 @@ const testimonials = [
 
 export default function TestimonialsSection() {
     return (
-        <section className="bg-gradient-to-r from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden">
+        <section className="   from-navyDark to-navy text-antiFlashWhite justify-center items-center py-32 px-6 overflow-hidden">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, ease: easeAlt }}
+                    viewport={once}
                 >
-                    <p className="text-caribbeanGreen/70 text-sm font-medium tracking-widest uppercase mb-4">
+                    <p className="text-electricBlue/70 text-sm font-medium tracking-widest uppercase mb-4">
                         Testimonios
                     </p>
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-                        Lo que dicen nuestros <span className="text-caribbeanGreen">clientes</span>
+                        Lo que dicen nuestros <span className="text-electricBlue">clientes</span>
                     </h2>
                 </motion.div>
 
@@ -42,17 +43,17 @@ export default function TestimonialsSection() {
                     {testimonials.map((t, i) => (
                         <motion.div
                             key={t.name}
-                            className="bg-darkGreen/20 p-8 rounded-2xl hover:bg-darkGreen/40 transition-colors duration-500 text-left"
+                            className=" /20 p-8 rounded-2xl hover: /40 transition-colors duration-500 text-left"
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.12, duration: 0.5, ease: easeAlt }}
+                            viewport={once}
                         >
                             <p className="text-antiFlashWhite/80 leading-relaxed mb-6">
                                 &ldquo;{t.text}&rdquo;
                             </p>
                             <div>
-                                <div className="font-semibold text-caribbeanGreen">{t.name}</div>
+                                <div className="font-semibold text-electricBlue">{t.name}</div>
                                 <div className="text-sm text-stone">{t.role}</div>
                             </div>
                         </motion.div>
