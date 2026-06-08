@@ -30,7 +30,7 @@ export default function TestimonialsSection() {
                     transition={{ duration: 0.6, ease: easeAlt }}
                     viewport={once}
                 >
-                    <p className="text-electricBlue/70 text-sm font-medium tracking-widest uppercase mb-4">
+                    <p className="text-electricBlue/80 text-sm font-medium tracking-widest uppercase mb-4">
                         Testimonios
                     </p>
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight">

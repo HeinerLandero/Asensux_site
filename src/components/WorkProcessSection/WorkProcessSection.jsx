@@ -60,7 +60,7 @@ export default function WorkProcessSection() {
         {/* Header */}
         <div className="text-center mb-20">
           <motion.p
-            className="text-electricBlue/70 text-sm font-medium tracking-widest uppercase mb-4"
+            className="text-electricBlue/80 text-sm font-medium tracking-widest uppercase mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: easeAlt }}

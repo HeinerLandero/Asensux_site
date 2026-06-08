@@ -65,21 +65,21 @@ export default function TeamSection() {
                 <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                   <a
                     href="#"
-                    className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-electricBlue/20 transition-colors"
+                    className="w-11 h-11 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-electricBlue/20 transition-colors"
                     aria-label={`LinkedIn de ${member.name}`}
                   >
                     <Linkedin className="w-4 h-4 text-white" />
                   </a>
                   <a
                     href="#"
-                    className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-electricBlue/20 transition-colors"
+                    className="w-11 h-11 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-electricBlue/20 transition-colors"
                     aria-label={`GitHub de ${member.name}`}
                   >
                     <Github className="w-4 h-4 text-white" />
                   </a>
                   <a
                     href="#"
-                    className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-electricBlue/20 transition-colors"
+                    className="w-11 h-11 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-electricBlue/20 transition-colors"
                     aria-label={`Email de ${member.name}`}
                   >
                     <Mail className="w-4 h-4 text-white" />

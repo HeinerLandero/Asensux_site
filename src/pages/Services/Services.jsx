@@ -2,6 +2,9 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Code2, Smartphone, Workflow, Palette, ShoppingCart, LayoutPanelLeft, Cpu } from "lucide-react";
 import { ease, fadeUp, once } from "../../lib/animations";
+import SEO from "../../components/SEO/SEO";
+import BreadcrumbSchema from "../../components/SEO/BreadcrumbSchema";
+import { PAGES } from "../../lib/siteConfig";
 
 const services = [
   {
@@ -81,7 +84,7 @@ function ServicePanel({ service, index }) {
                 {String(index + 1).padStart(2, "0")}
               </span>
               <span className="h-px w-8 bg-electricBlue/30" />
-              <span className="text-electricBlue/70 text-xs font-medium uppercase tracking-[0.12em]">
+              <span className="text-electricBlue/80 text-xs font-medium uppercase tracking-[0.12em]">
                 {service.subtitle}
               </span>
             </div>
@@ -154,6 +157,11 @@ export default function Services() {
 
   return (
     <>
+      <SEO {...PAGES["/servicios"]} canonical="/servicios" />
+      <BreadcrumbSchema items={[
+        { name: "Inicio", url: "/" },
+        { name: "Servicios", url: "/servicios" },
+      ]} />
       <section className="   from-navyDark to-navy text-antiFlashWhite">
         <div className="max-w-6xl mx-auto px-6 lg:px-12 pt-32 pb-20">
           <motion.div
@@ -163,7 +171,7 @@ export default function Services() {
             whileInView="visible"
             viewport={once}
           >
-            <p className="text-electricBlue/70 text-sm font-medium tracking-[0.15em] uppercase mb-6">
+            <p className="text-electricBlue/80 text-sm font-medium tracking-[0.15em] uppercase mb-6">
               Capacidades
             </p>
             <h1 className="font-display text-4xl md:text-6xl font-bold leading-[1.05] -tracking-[0.03em] mb-6">
@@ -210,15 +218,23 @@ export default function Services() {
                 <button
                   key={i}
                   onClick={() => scrollToPanel(i)}
-                  className="transition-all duration-500"
+                  className="flex items-center justify-center min-w-[44px] min-h-[44px] transition-all duration-500"
                   style={{
-                    width: i === activeIndex ? 32 : 8,
-                    height: 8,
-                    borderRadius: 4,
-                    backgroundColor: i === activeIndex ? "#0074D9" : "rgba(255,255,255,0.15)",
+                    width: i === activeIndex ? 44 : 44,
+                    height: 44,
                   }}
                   aria-label={`Ir a ${services[i].title}`}
-                />
+                >
+                  <span
+                    className="block transition-all duration-500"
+                    style={{
+                      width: i === activeIndex ? 32 : 8,
+                      height: 8,
+                      borderRadius: 4,
+                      backgroundColor: i === activeIndex ? "#0074D9" : "rgba(255,255,255,0.15)",
+                    }}
+                  />
+                </button>
               ))}
             </div>
           </div>

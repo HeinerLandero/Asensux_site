@@ -7,6 +7,10 @@ import { ease, fadeUp, once, staggerContainer } from "../../lib/animations";
 import mockupImg from "@/assets/images/mockup-desktop-inventory.png";
 import demoGif from "@/assets/images/demo-asensux.gif";
 import CircuitBackground from "../../components/CircuitBackground/CircuitBackground";
+import TiltCard from "../../components/TiltCard/TiltCard";
+import SEO from "../../components/SEO/SEO";
+import BreadcrumbSchema from "../../components/SEO/BreadcrumbSchema";
+import { PAGES } from "../../lib/siteConfig";
 
 const features = [
   {
@@ -210,7 +214,7 @@ function StickyFeatureShowcase() {
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="h-px w-8 bg-electricBlue/30" />
-                    <span className="text-electricBlue/70 text-xs font-medium uppercase tracking-[0.12em]">
+                    <span className="text-electricBlue/80 text-xs font-medium uppercase tracking-[0.12em]">
                       {f.subtitle}
                     </span>
                   </motion.div>
@@ -275,7 +279,13 @@ function StickyFeatureShowcase() {
 
 export default function Productos() {
   return (
-    <CircuitBackground>
+    <>
+      <SEO {...PAGES["/productos"]} canonical="/productos" />
+      <BreadcrumbSchema items={[
+        { name: "Inicio", url: "/" },
+        { name: "Productos", url: "/productos" },
+      ]} />
+      <CircuitBackground>
       <section className="relative min-h-screen flex items-center px-6 lg:px-12  from-navyDark via-navyDark to-navy">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -286,7 +296,7 @@ export default function Productos() {
               transition={{ duration: 0.7, ease }}
             >
               <motion.p
-                className="text-electricBlue/70 text-sm font-medium tracking-[0.15em] uppercase mb-6"
+                className="text-electricBlue/80 text-sm font-medium tracking-[0.15em] uppercase mb-6"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.15, duration: 0.5, ease }}
@@ -326,7 +336,7 @@ export default function Productos() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
                 <div className="absolute -inset-8 bg-electricBlue/10 rounded-[32px] blur-[80px] opacity-60" />
-                <div className="relative rounded-2xl overflow-hidden border border-white/[0.06] shadow-2xl glow-hero">
+                  <TiltCard className="relative rounded-2xl overflow-hidden border border-white/[0.06] shadow-2xl glow-hero" intensity={5}>
                   <div className="flex items-center gap-2 px-4 py-3 bg-bgSurface/80 border-b border-white/5">
                     <span className="w-3 h-3 rounded-full bg-red-400/60" />
                     <span className="w-3 h-3 rounded-full bg-yellow-400/60" />
@@ -340,7 +350,7 @@ export default function Productos() {
                     loading="lazy"
                     decoding="async"
                   />
-                </div>
+                </TiltCard>
               </motion.div>
             </motion.div>
           </div>
@@ -502,5 +512,6 @@ export default function Productos() {
         </motion.div>
       </section>
     </CircuitBackground>
+    </>
   );
 }

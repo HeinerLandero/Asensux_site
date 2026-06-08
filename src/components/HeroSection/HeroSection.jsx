@@ -105,7 +105,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="hidden lg:flex justify-center items-center relative"
+            className="flex justify-center items-center relative"
             style={{ y: mockupY, rotate: mockupRotate }}
           >
             <div className="relative w-full max-w-lg">

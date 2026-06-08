@@ -7,6 +7,7 @@ import Services from "../pages/Services/Services";
 import Productos from "../pages/Productos/Productos";
 import Portafolio from "../pages/Portafolio/Portafolio";
 import Blog from "../pages/Blog/Blog";
+import BlogPost from "../pages/BlogPost/BlogPost";
 import Contact from "../pages/Contact/Contact";
 import NotFound from "../pages/NotFound/NotFound";
 
@@ -20,6 +21,7 @@ export default function AppRouter() {
         <Route path="productos" element={<Productos />} />
         <Route path="portafolio" element={<Portafolio />} />
         <Route path="blog" element={<Blog />} />
+        <Route path="blog/:slug" element={<BlogPost />} />
         <Route path="contacto" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Route>

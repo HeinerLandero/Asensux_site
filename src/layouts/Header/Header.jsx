@@ -1,37 +1,58 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import '../../layouts/Header/Header.scss';
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logoDesktop from "@/assets/logos/main-logo.png";
-
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const toggleRef = useRef(null);
 
-  const navLinksLeft = [
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const handleKey = (e) => {
+      if (e.key === "Escape") {
+        setIsMenuOpen(false);
+        toggleRef.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", handleKey);
+    return () => document.removeEventListener("keydown", handleKey);
+  }, [isMenuOpen]);
+
+  const allLinks = [
     { to: "/", label: "Inicio", end: true },
     { to: "/nosotros", label: "Nosotros" },
     { to: "/servicios", label: "Servicios" },
-  ];
-
-  const navLinksRight = [
+    { to: "/blog", label: "Blog" },
     { to: "/productos", label: "Productos" },
     { to: "/portafolio", label: "Portafolio" },
     { to: "/contacto", label: "Contacto" },
   ];
 
+  const navLinksLeft = allLinks.slice(0, 3);
+  const navLinksRight = allLinks.slice(3);
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 glass text-antiFlashWhite transition-colors duration-300">
       <div className="container mx-auto px-4 py-3 lg:py-4 flex justify-between items-center relative">
         {/* Desktop Navigation - Left */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
+        <nav className="hidden lg:flex items-center gap-1">
           {navLinksLeft.map(({ to, label, end }) => (
-            <NavLink
-              key={to}
-              to={to}
-              end={end}
-              className={({ isActive }) => `nav-link-underline py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap ${isActive ? "text-electricBlue" : "text-antiFlashWhite"}`}
-            >
-              {label}
+            <NavLink key={to} to={to} end={end} className="relative px-3 py-2">
+              {({ isActive }) => (
+                <span className="relative z-10 text-sm font-medium whitespace-nowrap transition-colors duration-300 text-antiFlashWhite">
+                  {isActive && (
+                    <motion.span
+                      layoutId="navIndicatorLeft"
+                      className="absolute inset-0 bg-electricBlue/10 rounded-lg -z-10"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                  {label}
+                </span>
+              )}
             </NavLink>
           ))}
         </nav>
@@ -46,21 +67,28 @@ export default function Header() {
 
 
         {/* Desktop Navigation - Right */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
+        <nav className="hidden lg:flex items-center gap-1">
           {navLinksRight.map(({ to, label, end }) => (
-            <NavLink
-              key={to}
-              to={to}
-              end={end}
-              className={({ isActive }) => `nav-link-underline py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap ${isActive ? "text-electricBlue" : "text-antiFlashWhite"}`}
-            >
-              {label}
+            <NavLink key={to} to={to} end={end} className="relative px-3 py-2">
+              {({ isActive }) => (
+                <span className="relative z-10 text-sm font-medium whitespace-nowrap transition-colors duration-300 text-antiFlashWhite">
+                  {isActive && (
+                    <motion.span
+                      layoutId="navIndicatorRight"
+                      className="absolute inset-0 bg-electricBlue/10 rounded-lg -z-10"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                  {label}
+                </span>
+              )}
             </NavLink>
           ))}
         </nav>
 
         {/* Mobile Toggle */}
         <button
+          ref={toggleRef}
           className="lg:hidden text-antiFlashWhite focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
@@ -76,9 +104,20 @@ export default function Header() {
         </button>
       </div>
 
+      {/* Mobile overlay */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-30 lg:hidden"
+          onClick={() => { setIsMenuOpen(false); toggleRef.current?.focus(); }}
+          aria-hidden
+        />
+      )}
+
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="lg:hidden glass px-4 pb-6 pt-2 space-y-3 text-center z-40 transition-all duration-300"
+        <div
+          ref={menuRef}
+          className="fixed top-16 left-0 right-0 lg:hidden glass px-4 pb-6 pt-2 space-y-3 text-center z-40 transition-all duration-300"
         >
           {[...navLinksLeft, ...navLinksRight].map(({ to, label, end }) => (
             <NavLink

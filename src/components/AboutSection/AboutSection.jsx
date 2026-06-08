@@ -37,7 +37,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6, ease }}
           viewport={{ once: true, margin: "-40px" }}
         >
-          <p className="text-electricBlue/70 text-sm font-medium tracking-widest uppercase mb-3 sm:mb-4">
+          <p className="text-electricBlue/80 text-sm font-medium tracking-widest uppercase mb-3 sm:mb-4">
             Capacidad técnica
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">

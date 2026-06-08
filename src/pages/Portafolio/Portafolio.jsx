@@ -10,6 +10,10 @@ import anrealstudioImg from "@/assets/images/anrealstudio.png";
 import solucionesImg from "@/assets/images/soluciones-arquitectura.png";
 import estructurasImg from "@/assets/images/estructuras_y_acabados.png";
 import CircuitBackground from "../../components/CircuitBackground/CircuitBackground";
+import TiltCard from "../../components/TiltCard/TiltCard";
+import SEO from "../../components/SEO/SEO";
+import BreadcrumbSchema from "../../components/SEO/BreadcrumbSchema";
+import { PAGES } from "../../lib/siteConfig";
 
 const projects = [
   {
@@ -83,7 +87,7 @@ function ProjectContent({ project, index, total }) {
         <div className="lg:col-span-3 order-2 lg:order-1">
           <div className="relative group">
             <div className="absolute -inset-4 bg-electricBlue/5 rounded-2xl blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            <div className="relative rounded-xl overflow-hidden bg-bgSurface/50 border border-white/5 shadow-2xl backdrop-blur-sm">
+            <TiltCard className="relative rounded-xl overflow-hidden bg-bgSurface/50 border border-white/5 shadow-2xl backdrop-blur-sm" intensity={4}>
               <div className="flex items-center gap-2 px-4 py-3 bg-bgSurface/80 border-b border-white/5">
                 <span className="w-3 h-3 rounded-full bg-red-400/60" />
                 <span className="w-3 h-3 rounded-full bg-yellow-400/60" />
@@ -97,7 +101,7 @@ function ProjectContent({ project, index, total }) {
                 loading="lazy"
                 decoding="async"
               />
-            </div>
+            </TiltCard>
           </div>
         </div>
 
@@ -179,7 +183,13 @@ export default function Portafolio() {
   }, []);
 
   return (
-    <CircuitBackground>
+    <>
+      <SEO {...PAGES["/portafolio"]} canonical="/portafolio" />
+      <BreadcrumbSchema items={[
+        { name: "Inicio", url: "/" },
+        { name: "Portafolio", url: "/portafolio" },
+      ]} />
+      <CircuitBackground>
       <section className="relative min-h-screen flex items-center justify-center text-antiFlashWhite overflow-hidden">
         <div className="relative z-10 w-full max-w-6xl mx-auto px-6 lg:px-12 py-24">
           <div className="max-w-4xl mx-auto text-center">
@@ -320,5 +330,6 @@ export default function Portafolio() {
         </motion.div>
       </section>
     </CircuitBackground>
+    </>
   );
 }

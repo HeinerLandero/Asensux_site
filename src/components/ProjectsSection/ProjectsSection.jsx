@@ -5,6 +5,7 @@ import { ease, fadeUp, once } from "../../lib/animations";
 import inventoryImg from "@/assets/images/asensuxinventory.png";
 import ritmocaribeImg from "@/assets/images/ritmocaribe.png";
 import anrealstudioImg from "@/assets/images/anrealstudio.png";
+import TiltCard from "../TiltCard/TiltCard";
 
 const projects = [
     {

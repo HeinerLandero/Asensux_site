@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Home, ArrowLeft } from "lucide-react";
+import SEO from "../../components/SEO/SEO";
 
 export default function NotFound() {
   return (
-    <div className="min-h-[100dvh] flex flex-col items-center justify-center px-6 text-center bg-gradient-to-b from-navyDark to-navy relative overflow-hidden">
+    <>
+      <SEO title="404 — Página no encontrada | Asensux" description="Lo sentimos, la página que buscas no existe o ha sido movida." canonical="" />
+      <div className="min-h-[100dvh] flex flex-col items-center justify-center px-6 text-center bg-gradient-to-b from-navyDark to-navy relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] pointer-events-none" />
       
       <motion.div
@@ -41,5 +44,6 @@ export default function NotFound() {
         </div>
       </motion.div>
     </div>
+    </>
   );
 }

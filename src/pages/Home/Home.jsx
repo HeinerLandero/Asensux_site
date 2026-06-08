@@ -9,10 +9,13 @@ import ClientsSection from '../../components/ClientsSection/ClientsSection';
 import BenefitsSection from '../../components/BenefitsSection/BenefitsSection';
 import ContactSection from '../../components/ContactSection/ContactSection';
 import CircuitBackground from '../../components/CircuitBackground/CircuitBackground';
+import SEO from '../../components/SEO/SEO';
+import { PAGES } from '../../lib/siteConfig';
 
 export default function Home() {
   return (
     <>
+      <SEO {...PAGES["/"]} canonical="/" />
       <HeroSection />
       <CircuitBackground>
         <WorkProcessSection />
